@@ -14,7 +14,9 @@ class ReservaController extends Controller
      */
     public function index()
     {
-        //
+         $reservas = Reserva::all();
+        
+        return view('reserva.index',['reserva'=>$reservas]);
     }
 
     /**
@@ -24,7 +26,7 @@ class ReservaController extends Controller
      */
     public function create()
     {
-        //
+        return view('reserva.create');
     }
 
     /**
@@ -35,7 +37,8 @@ class ReservaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Reserva::create($request->all());
+        return redirect(route('reserva.index'));
     }
 
     /**

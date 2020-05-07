@@ -2,54 +2,50 @@
 
 @section('content')
 <div class="container">
-    <div class="card-header">
-        <h1>Reserva</h1>
-    </div>
-    <form action="{{Route('reserva.store')}}" method="post">
-    @csrf
-    <div class="row">
-       <div class="card col-12 col-md-3">
-       <br><label><b>Data d'entrada</b></label>
-            <input type="date" name="check_in" class="form-control">
-        </div>
-        <div class="card col-12 col-md-3">
-        <br><label><b>Data d'arribada</b></label>
-           <input type="date" name="check_out" class="form-control">
-        </div>
-        <div class="col-md-6"></div>
-        <div class="card col-12 col-md-3">
-            <br><label><b>Personas</b></label>
-            <input  class="form-control" type="number" name="persons" class="form-control">
-        </div>
-       
-        <div class="card col-12 col-md-3">
-            <br><label><b>Mascota</b></label>
-           <label><b>  Si  </b><input type="radio" name="pet" value=1>
-           <b>  No  </b><input type="radio" name="pet" value=0>
-          </label>
-        </div>
-        <div class="col-md-6"></div>
-        <div class="card col-12 col-md-3">
-            <label><b>Nom</b></label>
-            <input type="text" name="name" class="form-control">
-        </div>
-        <div class="card col-12 col-md-3">
-         <label><b>Correu Electrònic</b></label>
-         <input type="email" name="mail" class="form-control">
-        </div>
-        <div class="col-md-6"></div>
-        <div class="card col-12 col-md-6">
-        <label><b>Telèfon</b></label>
-        <input type="text" name="phone" class="form-control">
-        </div>
-      
-  
-    
-    </div><div class="card-footer col-12 col-md-6">
-      <input type="submit" class="btn btn-secondary btn-xs">
-      </div>
-    </form>
-   
 
+        <div class="card-header">
+            <h1>Reservas de Can Cruz</h1>
+        </div>
+        <a href="{{Route('reserva.create')}}" class="btn btn-dark">CREAR RESERVA</a>
+
+    <div class="card col-12 col-md-12">
+        <table class="table" style="overflow:auto; white-space:nowrap">
+
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>E-mail</th>
+                    <th>Teléfono</th>
+                    <th>Check-in</th>
+                    <th>Check-out</th>
+                    <th>Personas</th>
+                    <th>Mascota</th>
+                    <!-- <th>Desayuno</th> -->
+                    <th>Creada</th>
+                    <th>Actualizada</th>
+                </tr>
+            
+                @foreach($reserva as $reservas)
+                <tr>
+                    <td>{{$reservas->reservation_key}}</td>
+                    <td>{{$reservas->name}}</td>
+                    <td>{{$reservas->mail}}</td>
+                    <td>{{$reservas->phone}}</td>
+                    <td>{{$reservas->check_in}}</td>
+                    <td>{{$reservas->check_out}}</td>
+                    <td>{{$reservas->persons}}</td>
+                    <td>{{$reservas->pet}}</td>
+                    <td>{{$reservas->created_at}}</td>
+                    <td>{{$reservas->updated_at}}</td>
+                    <td>Eliminar</td>
+                    <td>Editar</td>
+                </tr>
+
+            
+
+            @endforeach
+            </table>
+       <!--  <form> -->
+    </div>
 </div>
 @endsection

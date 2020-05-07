@@ -37,8 +37,20 @@
                     <td>{{$reservas->pet}}</td>
                     <td>{{$reservas->created_at}}</td>
                     <td>{{$reservas->updated_at}}</td>
-                    <td>Eliminar</td>
-                    <td>Editar</td>
+                    <td>   
+                        <form action="{{Route('reserva.destroy', $reservas->id)}}" method="post">
+                        @method('delete')
+                        @csrf
+                            <button class="btn btn-danger">
+                            <i class="far fa-trash-alt"></i>
+                  
+                        </form>
+                    </td>
+                    <td> 
+                        <a href="{{Route('reserva.edit', $reservas->id)}}" class="btn btn-secondary" >
+                        <i class="fas fa-marker"></i>
+                        </a>
+                    </td>                                 
                 </tr>
 
             

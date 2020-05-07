@@ -9,11 +9,11 @@
     @csrf
     <div class="row">
        <div class="card col-12 col-md-3">
-       <br><label><b>Data d'entrada</b></label>
+       <br><label><b>Check-in</b></label>
             <input type="date" name="check_in" class="form-control">
         </div>
         <div class="card col-12 col-md-3">
-        <br><label><b>Data d'arribada</b></label>
+        <br><label><b>Check-out</b></label>
            <input type="date" name="check_out" class="form-control">
         </div>
         <div class="col-md-6"></div>
@@ -30,16 +30,16 @@
         </div>
         <div class="col-md-6"></div>
         <div class="card col-12 col-md-3">
-            <label><b>Nom</b></label>
+            <label><b>Nombre</b></label>
             <input type="text" name="name" class="form-control">
         </div>
         <div class="card col-12 col-md-3">
-         <label><b>Correu Electrònic</b></label>
+         <label><b>E-mail</b></label>
          <input type="email" name="mail" class="form-control">
         </div>
         <div class="col-md-6"></div>
         <div class="card col-12 col-md-6">
-        <label><b>Telèfon</b></label>
+        <label><b>Teléfono</b></label>
         <input type="text" name="phone" class="form-control">
         </div>
       

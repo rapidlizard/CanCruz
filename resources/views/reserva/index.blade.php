@@ -9,7 +9,7 @@
         <a href="{{Route('reserva.create')}}" class="btn btn-dark">CREAR RESERVA</a>
 
     <div class="card col-12 col-md-12" style="overflow:auto; white-space:nowrap">
-        <table class="table">
+        <table class="table" >
 
                 <tr>
                     <th>Código</th>
@@ -59,5 +59,7 @@
             </table>
        <!--  <form> -->
     </div>
+<input type="date" value="{{$reservas->check_in}}" value="{{$reservas->check_out}}">
+
 </div>
 @endsection

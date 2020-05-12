@@ -15,7 +15,7 @@ class CreateReservasTable extends Migration
     {
         Schema::create('reservas', function (Blueprint $table) {
             $table->id();
-            $table->string('reservation_key');
+            $table->string('reservation_key')->nullable();
             $table->string('name')->nullable(false);
             $table->string('mail')->nullable(false);
             $table->bigInteger('phone')->nullable(true);
@@ -24,7 +24,7 @@ class CreateReservasTable extends Migration
             $table->integer('persons')->nullable(false);
             $table->boolean('pet')->default(false);
             // $table->integer('total_price');
-            // $table->foreignId()
+            $table->foreignId('estancias_id')->nullable();
             $table->timestamps();
         });
     }

@@ -26,3 +26,7 @@ Route::resource('reserva','ReservaController');
 Route::resource('estancia','EstanciaController');
 
 Route::resource('calculadora','CalculadoraController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -9,7 +9,7 @@
         <a href="{{Route('reserva.create')}}" class="btn btn-dark">CREAR RESERVA</a>
 
     <div class="card col-12 col-md-12" style="overflow:auto; white-space:nowrap">
-        <table class="table" >
+        <table class="table">
 
                 <tr>
                     <th>Código</th>
@@ -20,7 +20,7 @@
                     <th>Check-out</th>
                     <th>Personas</th>
                     <th>Mascota</th>
-                    <!-- <th>Desayuno</th> -->
+                    <th>Estancia</th>
                     <th>Creada</th>
                     <th>Actualizada</th>
                 </tr>
@@ -35,6 +35,7 @@
                     <td>{{$reservas->check_out}}</td>
                     <td>{{$reservas->persons}}</td>
                     <td>{{$reservas->pet}}</td>
+                    <td>{{$reservas->estancias_id}}</td>
                     <td>{{$reservas->created_at}}</td>
                     <td>{{$reservas->updated_at}}</td>
                     <td>   
@@ -57,9 +58,10 @@
 
             @endforeach
             </table>
-       <!--  <form> -->
+       
     </div>
-<input type="date" value="{{$reservas->check_in}}" value="{{$reservas->check_out}}">
+    
 
+  
 </div>
 @endsection

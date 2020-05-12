@@ -14,7 +14,9 @@ class EstanciaController extends Controller
      */
     public function index()
     {
-        //
+        $estancias = Estancia::all();
+        
+        return view('estancia.index',['estancia'=>$estancias]);
     }
 
     /**
@@ -24,7 +26,7 @@ class EstanciaController extends Controller
      */
     public function create()
     {
-        //
+        return view('estancia.create');
     }
 
     /**
@@ -35,7 +37,8 @@ class EstanciaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Estancia::create($request->all());
+        return redirect(route('estancia.index'));
     }
 
     /**
@@ -57,7 +60,7 @@ class EstanciaController extends Controller
      */
     public function edit(Estancia $estancia)
     {
-        //
+        return view('estancia.edit',['estancia'=>$estancia]);
     }
 
     /**
@@ -69,7 +72,8 @@ class EstanciaController extends Controller
      */
     public function update(Request $request, Estancia $estancia)
     {
-        //
+        $estancia->update($request->all());
+        return redirect(route('estancia.index'));
     }
 
     /**
@@ -80,6 +84,7 @@ class EstanciaController extends Controller
      */
     public function destroy(Estancia $estancia)
     {
-        //
+        $estancia->delete();
+        return redirect(route('estancia.index'));
     }
 }

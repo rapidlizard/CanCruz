@@ -1,7 +1,6 @@
 ## A super cool project by:
-- **Axel**
+- **Axel Que pachaa!**
 - **Eva**
 - **Alen**
 - **Francisco**
 
-CanCruz

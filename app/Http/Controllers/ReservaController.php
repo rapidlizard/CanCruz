@@ -4,14 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Reserva;
 use Illuminate\Http\Request;
+use App\Calculadora;
+use Illuminate\Support\Facades\DB;
 
 class ReservaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
          $reservas = Reserva::all();
@@ -19,25 +16,34 @@ class ReservaController extends Controller
         return view('reserva.index',['reserva'=>$reservas]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('reserva.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        Reserva::create($request->all());
+        $calculadora = new Calculadora();
+
+        $precioTotal = $calculadora->calcularPrecioTotal($request);
+
+        // dd($precioTotal);
+        // Reserva::create($request->all());
+        Reserva::create([
+            'name' => $request->name,
+            'mail' => $request->mail, 
+            'phone' => $request->phone, 
+            'check_in' => $request->check_in, 
+            'check_out' => $request->check_out, 
+            'persons' => $request->persons, 
+            'pet' => $request->pet, 
+            'breakfast' => $request->breakfast,
+            'estancias_id' => $request->estancias_id, 
+            'phone' => $request->phone, 
+            'total_price' => $precioTotal
+            
+        ]);
+        
         return redirect(route('reserva.index'));
     }
 

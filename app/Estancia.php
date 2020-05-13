@@ -9,6 +9,7 @@ class Estancia extends Model
     protected $fillable = ['name','status','price'];
 
 
+    
     public function Reserva()
     {
         return $this->belongsTo(Reserva::class);

@@ -9,57 +9,79 @@
     @csrf
     @method('put')
     <div class="row">
-       <div class="card col-12 col-md-3">
+       <div class="col-12 col-md-4">
        <br><label><b>Check-in</b></label>
             <input type="date" name="check_in" class="form-control" value="{{$reserva->check_in}}">
         </div>
-        <div class="card col-12 col-md-3">
+        <div class="col-12 col-md-4">
         <br><label><b>Check-out</b></label>
            <input type="date" name="check_out" class="form-control" value="{{$reserva->check_out}}">
         </div>
-        <div class="col-md-6"></div>
-        <div class="card col-12 col-md-3">
+        <br>
+        <div class=" col-12 col-md-4">
             <br><label><b>Personas</b></label>
             <input  class="form-control" type="number" name="persons" class="form-control" value="{{$reserva->persons}}">
         </div>
-       
-        <div class="card col-12 col-md-3">
-        <br><label><b>Mascota</b><br>
-          <b>Si</b>
+       <br>
+        <div class=" col-12 col-md-4">
+        <br> <br><label><b>Mascota</b>
+          <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Si</b>
           <input type="radio" name="pet" value="1" 
           @if($reserva->pet == 1)
             checked
           @endif
           >
-          </label><label><b>No</b>
+          <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>No</b>
           <input type="radio" name="pet" value="0" 
           @if($reserva->pet == 0)
             checked
           @endif
           >
-          </label>  
-           <!-- <label><b>  Si  </b><input type="radio" name="pet" value=1>
-           <b>  No  </b><input type="radio" name="pet" value=0>
-          </label> -->
+          </label> 
+          </div> 
+          <div class="col-12 col-md-4">
+          <br><br><label><b>Desayuno</b>
+           <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <b>Si</b>
+           <input type="radio" name="breakfast" value=1
+           @if($reserva->breakfast == 1)
+            checked
+          @endif
+           >
+           </label><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <b>No</b><input type="radio" name="breakfast" value=0
+           @if($reserva->breakfast == 0)
+            checked
+          @endif
+           >
+          </label>
+        
         </div>
-        <div class="col-md-6"></div>
-        <div class="card col-12 col-md-3">
-            <label><b>Nombre</b></label>
-            <input type="text" name="name" class="form-control" value="{{$reserva->name}}">
+        <div class="col-12 col-md-4">
+         <br><label><b>Habitción</b></label>
+         <input type="email" name="mail" class="form-control" value="{{$reserva->estancias_id}}">
         </div>
-        <div class="card col-12 col-md-3">
-         <label><b>E-mail</b></label>
+        <div class="col-12 col-md-4">
+         <br><label><b>E-mail</b></label>
          <input type="email" name="mail" class="form-control" value="{{$reserva->mail}}">
         </div>
-        <div class="col-md-6"></div>
-        <div class="card col-12 col-md-6">
-        <label><b>Teléfono</b></label>
+        
+        <div class="col-12 col-md-4">
+            <br><label><b>Nombre</b></label>
+            <input type="text" name="name" class="form-control" value="{{$reserva->name}}">
+        </div>
+       
+        
+        <div class="col-12 col-md-4">
+        <br><label><b>Teléfono</b></label>
         <input type="text" name="phone" class="form-control" value="{{$reserva->phone}}">
         </div>
+     
       
   
     
-    </div><div class="card-footer col-12 col-md-6">
+    </div><br>
+    <div class="card-footer col-12 col-md-12">
       <input type="submit" class="btn btn-secondary btn-xs" value="Actualizar Reserva">
       </div>
     </form>

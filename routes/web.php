@@ -19,10 +19,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'ReservaController@index')->name('home');
 
-Route::resource('reserva','ReservaController');
+Route::resource('reserva','ReservaController')->middleware('auth');
 
 Route::resource('estancia','EstanciaController');
 
 Route::resource('calculadora','CalculadoraController');
+
+Auth::routes();
+
+

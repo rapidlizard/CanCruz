@@ -1,6 +1,8 @@
 ## A super cool project by:
 - **Axel**
 - **Eva**
-- **Alain**
+- **Alen**
 - **Francisco**
+
+Protocolo git aprobado!
 

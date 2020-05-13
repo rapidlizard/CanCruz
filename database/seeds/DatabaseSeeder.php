@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         factory(Calculadora::class)->create(['id'=>2,'name'=>'Mascota','price'=>'5']);
         factory(Calculadora::class)->create(['id'=>3,'name'=>'Habitacion','price'=>'48']);
 
-        factory(User::class)-create([]);
+        
         $this->call(CalculadoraSeeder::class);
         $this->call(EstanciaSeeder::class);
         $this->call(ReservaSeeder::class);

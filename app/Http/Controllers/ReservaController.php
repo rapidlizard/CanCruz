@@ -23,13 +23,19 @@ class ReservaController extends Controller
 
     public function store(Request $request)
     {
+       
+        $reserva = new Reserva();
         $calculadora = new Calculadora();
 
+        $reservaKey = $reserva->generateRandomString(6);
         $precioTotal = $calculadora->calcularPrecioTotal($request);
+        // dd($reservaKey);
+
 
         // dd($precioTotal);
         // Reserva::create($request->all());
         Reserva::create([
+            'reservation_key' => $reservaKey,
             'name' => $request->name,
             'mail' => $request->mail, 
             'phone' => $request->phone, 

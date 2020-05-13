@@ -13,6 +13,7 @@ class CreateReservasTable extends Migration
      */
     public function up()
     {
+       
         Schema::create('reservas', function (Blueprint $table) {
             $table->id();
             $table->string('reservation_key')->nullable();

@@ -60,7 +60,7 @@
             </tr>
             @endforeach
         </table>
-        <!-- <input type="date" select="{{$reservas->check_in}}"> -->
+      
     </div>
 </div>
 @endsection

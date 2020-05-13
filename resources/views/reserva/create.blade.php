@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="card-header">
+    <div>
         <h1>Añadir una reserva</h1>
     </div>
     <form action="{{Route('reserva.store')}}" method="post">
@@ -66,12 +66,12 @@
         <br><label><b>Teléfono</b></label>
         <input type="text" name="phone" class="form-control">
         </div>
-      
-  
-    
     </div>
-    <br><div class="card-footer col-12 col-md-12">
-      <input type="submit" class="btn btn-secondary btn-xs">
+        <br>
+      <br>
+      <div class="d-flex justify-content-between">
+        <a href="/reserva" class="btn btn-link"><span style="padding-right:8px"><i class="fas fa-chevron-left"></i></span>Volver al listado</a>
+        <input type="submit" class="btn btn-primary btn-xs" value="Actualizar Reserva">
       </div>
     </form>
    

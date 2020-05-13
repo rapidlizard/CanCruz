@@ -3,11 +3,11 @@
 @section('content')
 <div class="container">
 
-    <div class="card-header">
+    <div class="d-flex justify-content-sm-between align-items-center">
         <h1>Reservas de Can Cruz</h1>
         <a href="{{Route('reserva.create')}}" class="btn btn-dark">CREAR RESERVA</a>
     </div>
-        
+    <br>
     <div class="card col-12 col-md-12" style="overflow:auto; white-space:nowrap">
 
         <table class="table">
@@ -18,13 +18,6 @@
                 <th>Teléfono</th>
                 <th>Entrada</th>
                 <th>Salida</th>
-                <th>Personas</th>
-                <th>Mascota</th>
-                <th>Desayuno</th>
-                <th>Estancia</th>
-                <th>Precio Total</th>
-                <th>Creada</th>
-                <th>Actualizada</th>
             </tr>
 
             @foreach($reserva as $reservas)
@@ -35,13 +28,6 @@
                 <td>{{$reservas->phone}}</td>
                 <td>{{$reservas->check_in}}</td>
                 <td>{{$reservas->check_out}}</td>
-                <td>{{$reservas->persons}}</td>
-                <td>{{$reservas->pet}}</td>
-                <td>{{$reservas->breakfast}}</td>
-                <td>{{$reservas->estancias_id}}</td>
-                <td>{{$reservas->total_price}}</td>
-                <td>{{$reservas->created_at}}</td>
-                <td>{{$reservas->updated_at}}</td>
                 <td>   
                     <form action="{{Route('reserva.destroy', $reservas->id)}}" method="post">
                     @method('delete')
@@ -53,7 +39,7 @@
 
                 <td>
                     <a href="{{Route('reserva.edit', $reservas->id)}}" class="btn btn-secondary" >
-                    <i class="fas fa-marker"></i>
+                    <i class="fas fa-plus"></i>
                     </a>
                 </td>
 

@@ -7,8 +7,12 @@
 // Mixins
 @import 'mixin';
 
+// Typography
+@import 'typography';
+
 // Bootstrap
-// @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
 
 // Components
 @import 'nav';
+@import 'title-text';

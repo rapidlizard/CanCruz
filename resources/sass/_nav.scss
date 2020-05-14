@@ -1,27 +1,52 @@
-.bullshit {
-  @include desktop-container;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  background-color: #777777;
-  font-family: $font;
+header {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/home/francisco/Desktop/CanCruz/public/images/header.jpg');
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .header {
+    @include desktop-container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: $font;
 
-  h1 {
+    span {
+      font-size: 48px;
+    }
     
-    font-size: 48px;
-  }
-  
-  nav {
-    a {
-      font-size: 18px;
-      text-decoration: none;
-      color: white;
+    .headerNav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      nav {
+        a {
+          font-size: 18px;
+          color: white !important;
+          margin: 0 10px;
+          text-transform: lowercase;
+        }
+      }
+    }
+
+    button {
+      background-color: white;
+      border-radius: 2px;
+      border: none;
+      width: 120px;
+      height: 50px;
     }
   }
 
-  button {
-    background-color: white;
-    border-radius: 2px;
+  .headerContent {
+    @include desktop-container;
+    height: 400px;
+    padding-top: 150px;
+    color: white;
+    
+    a {
+      text-decoration: underline;
+    }
   }
-
 }

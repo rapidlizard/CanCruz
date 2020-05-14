@@ -71,7 +71,7 @@
       <br>
       <div class="d-flex justify-content-between">
         <a href="/reserva" class="btn btn-link"><span style="padding-right:8px"><i class="fas fa-chevron-left"></i></span>Volver al listado</a>
-        <input type="submit" class="btn btn-primary btn-xs" value="Actualizar Reserva">
+        <input type="submit" class="btn btn-primary btn-xs" value="Crear reserva">
       </div>
     </form>
    

@@ -16,6 +16,7 @@
                 <th>Nombre</th>
                 <th>E-mail</th>
                 <th>Teléfono</th>
+                <th>Price</th>
                 <th>Entrada</th>
                 <th>Salida</th>
             </tr>
@@ -26,6 +27,7 @@
                 <td>{{$reservas->name}}</td>
                 <td>{{$reservas->mail}}</td>
                 <td>{{$reservas->phone}}</td>
+                <td>{{$reservas->total_price}}</td>
                 <td>{{$reservas->check_in}}</td>
                 <td>{{$reservas->check_out}}</td>
                 <td>   

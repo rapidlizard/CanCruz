@@ -74,7 +74,11 @@
         <div class="col-12 col-md-4">
           <br>
           <label><b>Habitción</b></label>
-          <input type="email" name="mail" class="form-control" value="{{$reserva->estancias_id}}">
+          <select class="col-md-12 form-control" name="estancias_id" id="">
+            <option value="1">Puigraciós</option>
+            <option value="2">Estança de Sant Cristofol</option>
+            <option value="3">Estança de la Roca Centella</option>
+          </select>
         </div>
 
         <div class="col-12 col-md-4">

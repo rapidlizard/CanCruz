@@ -13,6 +13,11 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// Layout
+@import 'layout';
+
 // Components
+@import 'components';
 @import 'nav';
-@import 'title-text';
+@import 'img-caption';
+@import 'img-text-right';

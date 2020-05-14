@@ -22,10 +22,10 @@ header {
       justify-content: center;
       nav {
         a {
-          font-size: 18px;
           color: white !important;
           margin: 0 10px;
           text-transform: lowercase;
+          text-decoration: none !important;
         }
       }
     }
@@ -44,9 +44,5 @@ header {
     height: 400px;
     padding-top: 150px;
     color: white;
-    
-    a {
-      text-decoration: underline;
-    }
   }
 }

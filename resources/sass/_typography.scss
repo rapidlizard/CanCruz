@@ -10,17 +10,19 @@ h2 {
 }
 
 h3 {
-    font-size: 32px !important;
+    font-size: 30px !important;
     font-family: $font !important;
 }
 
 p {
     font-size: 16px !important;
     font-family: $font !important;
+    line-height: 28px !important;
 }
 
 a {
     font-size: 16px !important;
     font-weight: bold !important;
     font-family: $font !important;
+    text-decoration: underline !important;
 }

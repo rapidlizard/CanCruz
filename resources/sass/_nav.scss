@@ -1,0 +1,27 @@
+.bullshit {
+  @include desktop-container;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  background-color: #777777;
+  font-family: $font;
+
+  h1 {
+    
+    font-size: 48px;
+  }
+  
+  nav {
+    a {
+      font-size: 18px;
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  button {
+    background-color: white;
+    border-radius: 2px;
+  }
+
+}

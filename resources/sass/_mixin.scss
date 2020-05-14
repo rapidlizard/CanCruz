@@ -1,0 +1,8 @@
+@mixin mobile-container {
+  padding: 0 10px;
+}
+
+@mixin desktop-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}

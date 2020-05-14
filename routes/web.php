@@ -27,10 +27,20 @@ Route::resource('estancia','EstanciaController');
 
 Route::resource('calculadora','CalculadoraController');
 
-Auth::routes();
+Route::get('/masia','PagesController@masia');
+
+
+Route::get('/huerto_cocina','PagesController@huerto_cocina');
+
+Route::get('/parque_montseny','PagesController@parque_montseny');
+
+Route::get('/contacto','PagesController@contacto');
+
+Route::get('/puigracios','PagesController@puigracios');
+
+Route::get('/santcristofol','PagesController@santcristofol');
+
+Route::get('/rocacentella','PagesController@rocacentella');
 
 
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

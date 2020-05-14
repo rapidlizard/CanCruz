@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
+
+
 @section('content')
 <div class="container">
+
 
     <div class="d-flex justify-content-sm-between align-items-center">
         <h1>Reservas de Can Cruz</h1>

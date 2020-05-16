@@ -16,22 +16,27 @@
                 <th>Nombre</th>
                 <th>E-mail</th>
                 <th>Teléfono</th>
-                <th>Price</th>
+                <th>Precio</th>
+                <th>Habitación</th>
                 <th>Entrada</th>
                 <th>Salida</th>
+
             </tr>
 
-            @foreach($reserva as $reservas)
+            @foreach($reservas as $reserva)
             <tr>
-                <td>{{$reservas->reservation_key}}</td>
-                <td>{{$reservas->name}}</td>
-                <td>{{$reservas->mail}}</td>
-                <td>{{$reservas->phone}}</td>
-                <td>{{$reservas->total_price}}</td>
-                <td>{{$reservas->check_in}}</td>
-                <td>{{$reservas->check_out}}</td>
+                
+                <td>{{$reserva->reservation_key}}</td>
+                <td>{{$reserva->name}}</td>
+                <td>{{$reserva->mail}}</td>
+                <td>{{$reserva->phone}}</td>
+                <td>{{$reserva->total_price}}</td>
+                <td>{{$reserva->estancia->name}}</td>
+                <td>{{$reserva->check_in}}</td>
+                <td>{{$reserva->check_out}}</td>
+                
                 <td>   
-                    <form action="{{Route('reserva.destroy', $reservas->id)}}" method="post">
+                    <form action="{{Route('reserva.destroy', $reserva->id)}}" method="post">
                     @method('delete')
                     @csrf
                         <button class="btn btn-danger">
@@ -40,7 +45,7 @@
                 </td>
 
                 <td>
-                    <a href="{{Route('reserva.edit', $reservas->id)}}" class="btn btn-secondary" >
+                    <a href="{{Route('reserva.edit', $reserva->id)}}" class="btn btn-secondary" >
                     <i class="fas fa-plus"></i>
                     </a>
                 </td>

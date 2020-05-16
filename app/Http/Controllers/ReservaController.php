@@ -13,7 +13,7 @@ class ReservaController extends Controller
     {
          $reservas = Reserva::all();
         
-        return view('reserva.index',['reserva'=>$reservas]);
+        return view('reserva.index',['reservas'=>$reservas]);
     }
 
     public function create()
@@ -44,7 +44,7 @@ class ReservaController extends Controller
             'persons' => $request->persons, 
             'pet' => $request->pet, 
             'breakfast' => $request->breakfast,
-            'estancias_id' => $request->estancias_id, 
+            'estancia_id' => $request->estancia_id, 
             'phone' => $request->phone, 
             'total_price' => $precioTotal
             
@@ -72,6 +72,8 @@ class ReservaController extends Controller
      */
     public function edit(Reserva $reserva)
     {
+      
+        
         return view('reserva.edit',['reserva'=>$reserva]);
     }
 
@@ -84,7 +86,28 @@ class ReservaController extends Controller
      */
     public function update(Request $request, Reserva $reserva)
     {
-        $reserva->update($request->all());
+        $calculadora = new Calculadora();
+        $precioTotal = $calculadora->calcularPrecioTotal($request);
+           
+            $reserva->update([
+                'name' => $request->name,
+                'mail' => $request->mail, 
+                'phone' => $request->phone, 
+                'check_in' => $request->check_in, 
+                'check_out' => $request->check_out, 
+                'persons' => $request->persons, 
+                'pet' => $request->pet, 
+                'breakfast' => $request->breakfast,
+                'estancia_id' => $request->estancia_id, 
+                'phone' => $request->phone, 
+                'total_price' => $precioTotal]);
+
+        
+
+        
+        
+  
+        
         return redirect(route('reserva.index'));
     }
 

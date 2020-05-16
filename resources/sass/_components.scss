@@ -1,6 +1,6 @@
 .flex-3-items {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   @include desktop-container;
 }
 
@@ -10,6 +10,7 @@
   @include desktop-container;
 }
 
+
 .caption {
   text-align: center;
   padding-top: 35px;
@@ -18,9 +19,9 @@
   }
 }
 
-.text-r {
+.text-square-half {
   text-align: center;
-  padding: 0 150px;
+  padding: 0 5%;
   h3 {
     padding-bottom: 40px;
   }
@@ -31,3 +32,6 @@
     color: black !important;
   }
 }
+  
+
+

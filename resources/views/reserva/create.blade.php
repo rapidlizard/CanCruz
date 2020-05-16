@@ -45,7 +45,7 @@
         </div>
          <div class="col-12 col-md-4">
          <br><label><b>Habitacion</b></label>
-        <br> <select class="col-md-12 form-control" name="estancias_id" id="">
+        <br> <select class="col-md-12 form-control" name="estancia_id" id="">
             <option value="1">Puigraciós</option>
             <option value="2">Estança de Sant Cristofol</option>
             <option value="3">Estança de la Roca Centella</option>

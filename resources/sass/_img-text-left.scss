@@ -1,0 +1,10 @@
+.img-text-left {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    img {
+      width: 50%;
+      height: 500px;
+      object-fit: cover;
+    } 
+}

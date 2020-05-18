@@ -6,4 +6,3 @@
 
 Protocolo git aprobado!
 
-Devkit

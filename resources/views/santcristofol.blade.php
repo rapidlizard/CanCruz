@@ -4,7 +4,7 @@
 
 <div class="content">
     <div class="title m-b-md">
-        Can Cruz
+        Sant Cristofol
     </div>   
 </div>
         

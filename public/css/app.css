@@ -10935,6 +10935,12 @@ section {
   margin-bottom: 20px;
 }
 
+.card-estancia {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .huerto .h2texto {
   margin-bottom: 20px;
 }
@@ -10982,12 +10988,34 @@ section {
 }
 
 .estancia-img-price {
+  position: relative;
+  padding-top: 40px;
+  padding-left: 40px;
   font-family: "DM Mono", monospace;
   color: white;
 }
 
 .estancia-img-price strong {
   font-size: 40px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  padding-bottom: 15px;
+}
+
+.cta {
+  background-color: #967361;
+  color: white;
+  padding: 20px;
+  border: none;
+  width: 100%;
+  margin-top: 30px;
 }
 
 header {
@@ -11115,6 +11143,8 @@ header .headerContent {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 777px;
+  height: 500px;
 }
 
 .h2-texto-wideimg a {
@@ -11160,5 +11190,17 @@ header .headerContent {
 
 .site-footer .social-footer a {
   color: black;
+}
+
+.estancia-form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.estancia-form .block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 

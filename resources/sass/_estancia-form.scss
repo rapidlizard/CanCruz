@@ -1,2 +1,14 @@
 .estancia-form {
+    
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+
+    .block{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+  
 }
+    

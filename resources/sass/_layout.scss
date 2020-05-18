@@ -8,6 +8,11 @@ section {
     margin-bottom: 20px;
   }
 }
+.card-estancia{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 
 .huerto {
 

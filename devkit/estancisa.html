@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+        <title>{{ config('app.name', 'Laravel') }}</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+            integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+            crossorigin="anonymous"
+        />
+
+        <!-- Styles -->
+        <link href="../public/css/app.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class=" bg-header-dark">
+            <div class="header">
+                <span>Can Cruz</span>
+                <div class="headerNav">
+                    <nav>
+                        <a href="">La Masía</a>
+                        <a href="">Estancia</a>
+                        <a href="">Huerto y cocina ecológica</a>
+                        <a href="">Parque natural de Montseny</a>
+                        <a href="">Contacto</a>
+                    </nav>
+                </div>
+                <button>Reserva</button>
+            </div>
+            <div class="headerContent">
+                <h1>Masia Can Cruz</h1>
+                <p>Alojamiento rural en el Parque Natural de Montseny</p>
+                <a href="" class="text-light">conoce la historia de la Masía</a>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <div class="h2texto">
+                    <h2>Estancia</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+                <section>
+                    <div class="estancia-img-price bg-estancia1-price">
+                        <p><strong>48&euro;</strong>/noche</p>
+                    </div>
+                    <div class="estancia-form">
+                        <form action="">
+                            <div>
+                                <label>Numero de Personas</label>
+                                <select name="persons" id="">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label>Check in</label>
+                                <input type="date" name="check_in" id="" />
+                            </div>
+                            <div>
+                                <label>Check out</label>
+                                <input type="date" name="check_out" id="" />
+                            </div>
+                            <div>
+                                <input type="checkbox" name="pet" id="" />
+                                <label class="radio-label">
+                                    Llevo Mascota (+5&euro;)
+                                </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="breakfast" id="" />
+                                <label class="radio-label">
+                                    Con desayuno (+12&euro;/persona)
+                                </label>
+                            </div>
+                            <div>
+                                <a href="">Calcular Precio</a>
+                            </div>
+                        </form>
+                    </>
+                </section>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="logo-footer">
+                <img
+                    src="https://cdn.shopify.com/shopifycloud/hatchful-web/assets/6fcc76cfd1c59f44d43a485167fb3139.png"
+                    alt=""
+                />
+            </div>
+            <div class="nav-footer">
+                <a href="">La Masia</a>
+                <a href="">Alojamiento</a>
+                <a href="">Huerto y cocina ecológica</a>
+                <a href="">Animales</a>
+                <a href="">Parc natural </a>
+                <a href="">Contacto</a>
+            </div>
+            <div class="contact-footer">
+                <p>Figaró-Montmany 08590 Barcelona</p>
+                <p>+34 607 30 44 98</p>
+                <p>info@masicacancruz.com</p>
+            </div>
+            <div class="social-footer">
+                <a href=""><i class="fab fa-facebook-square fa-3x"></i></a>
+                <a href=""><i class="fab fa-instagram-square fa-3x"></i></a>
+                <a href=""><i class="fab fa-twitter-square fa-3x"></i></a>
+            </div>
+        </footer>
+    </body>
+</html>

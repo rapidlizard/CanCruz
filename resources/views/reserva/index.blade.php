@@ -28,7 +28,7 @@
 
             @foreach($reservas as $reserva)
             <tr>
-                
+
                 <td>{{$reserva->reservation_key}}</td>
                 <td>{{$reserva->name}}</td>
                 <td>{{$reserva->mail}}</td>
@@ -37,8 +37,8 @@
                 <td>{{$reserva->estancia->name}}</td>
                 <td>{{$reserva->check_in}}</td>
                 <td>{{$reserva->check_out}}</td>
-                
-                <td>   
+
+                <td>
                     <form action="{{Route('reserva.destroy', $reserva->id)}}" method="post">
                     @method('delete')
                     @csrf
@@ -56,7 +56,7 @@
             </tr>
             @endforeach
         </table>
-      
+
     </div>
 </div>
 @endsection

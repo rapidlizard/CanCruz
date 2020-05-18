@@ -10981,6 +10981,15 @@ section {
   color: black !important;
 }
 
+.estancia-img-price {
+  font-family: "DM Mono", monospace;
+  color: white;
+}
+
+.estancia-img-price strong {
+  font-size: 40px;
+}
+
 header {
   display: block;
 }
@@ -11095,9 +11104,61 @@ header .headerContent {
 }
 
 .bg-header-dark {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/home/francisco/Desktop/CanCruz/public/images/header.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1505916349660-8d91a99c3e23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.bg-estancia1-price {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://canplans.files.wordpress.com/2019/06/img_4284_lowres.jpg?w=640");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.h2-texto-wideimg a {
+  margin-top: 20px;
+  text-align: center;
+  display: block;
+  color: black !important;
+}
+
+.h2-texto-wideimg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 400px;
+  width: 100vw;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  margin-top: 60px;
+}
+
+.site-footer div {
+  width: 20%;
+}
+
+.site-footer .logo-footer img {
+  width: 200px;
+  height: 200px;
+}
+
+.site-footer .nav-footer a {
+  display: block;
+  color: black;
+  line-height: 35px;
+}
+
+.site-footer .social-footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.site-footer .social-footer a {
+  color: black;
 }
 

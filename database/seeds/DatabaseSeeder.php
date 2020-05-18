@@ -14,8 +14,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(User::class)-create(['id'=>1, 'name' =>'Axel','mail'=>'axelcayuela@hotmail.com','password'=>'passwprd']);
-
+        factory(User::class)-create(['id'=>1, 'name' =>'Admin','mail'=>'admin@cancruz.com','password'=>'password']);
+        
+        
         factory(Reserva::class)->create(['id'=>1,'name'=>'Ramona','mail'=>'axelcayuela@hotmail.com','phone'=>'936759232',
         'check_in'=>'2020-06-15','check_out'=>'2020-06-18','persons'=>'3','pet'=>'1','breakfast'=>'1','total_price'=>'101','estancia_id'=>'1']);
         

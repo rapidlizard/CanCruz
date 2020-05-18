@@ -11,11 +11,11 @@
         <div class="col-12 col-md-4">
             <br>
             <label><b>Llegada</b></label>
-            <input type="date" name="check_in" class="form-control">
+            <input type="date" name="check_in" id="check_in" class="form-control">
         </div>
         <div class="col-12 col-md-4">
         <br><label><b>Salida</b></label>
-           <input type="date" name="check_out" class="form-control">
+           <input type="date" name="check_out" id="check_out" class="form-control">
         </div>
         
         <div class="col-12 col-md-4">
@@ -74,7 +74,20 @@
         <input type="submit" class="btn btn-primary btn-xs" value="Crear reserva">
       </div>
     </form>
-   
+
+<!-- ///////  script para calendario de ejemplo -->
+
+<!--     <script type="text/javascript">  
+        $('#startdate').datepicker({ 
+            autoclose: true,   
+            format: 'yyyy-mm-dd'  
+         });
+         $('#enddate').datepicker({ 
+            autoclose: true,   
+            format: 'yyyy-mm-dd'
+         }); 
+    </script>
+    -->
 
 </div>
 @endsection

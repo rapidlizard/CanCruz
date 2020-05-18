@@ -6,24 +6,19 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateCalendarsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('calendars', function (Blueprint $table) {
             $table->id();
+            $table->string('reservation_key');
+            $table->date('check-in');
+            $table->date('check-out');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+
     public function down()
     {
         Schema::dropIfExists('calendars');

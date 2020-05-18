@@ -5,19 +5,22 @@ namespace App\Http\Controllers;
 use App\Reserva;
 use Illuminate\Http\Request;
 use App\Calculadora;
+/* use App\Calendar; */
 use Illuminate\Support\Facades\DB;
 
 class ReservaController extends Controller
 {
     public function index()
     {
-         $reservas = Reserva::all();
+        $reservas = Reserva::all();
         
         return view('reserva.index',['reservas'=>$reservas]);
     }
 
     public function create()
     {
+   /*   $calendar = New Calendar; 
+        */
         return view('reserva.create');
     }
 

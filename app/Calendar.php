@@ -3,19 +3,19 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Reserva;
+
+use \DateTime;
 
 class Calendar extends Model
 {
-    protected $fillable = ['check-in','check-out', 'reservation_key'];
+    public function calculate_total_days($check_in, $check_out)
+    {
+        $checkin = new DateTime($check_in);
+        $checkout = new DateTime($check_out);
 
+        $interval = date_diff($checkin, $checkout);
+        $totalDays = intval($interval->format('%a'));
+        
+        return $totalDays;
+    }
 }
-
-
-
-
-    /* function generateRandomString($length) 
-    { 
-        return substr(str_shuffle("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
-    }  */
-

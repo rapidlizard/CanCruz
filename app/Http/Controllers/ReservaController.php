@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Calendar;
+use App\Calculadora;
 use App\Reserva;
 use Illuminate\Http\Request;
-use App\Calculadora;
-/* use App\Calendar; */
 use Illuminate\Support\Facades\DB;
+
 
 class ReservaController extends Controller
 {
     public function index()
     {
         $reservas = Reserva::all();
-        
         return view('reserva.index',['reservas'=>$reservas]);
+
     }
 
     public function create()
@@ -26,33 +27,33 @@ class ReservaController extends Controller
 
     public function store(Request $request)
     {
-       
         $reserva = new Reserva();
         $calculadora = new Calculadora();
+        $calendar = new Calendar();
+
+        $checkin = $request->check_in;
+        $checkout = $request->check_out;
 
         $reservaKey = $reserva->generateRandomString(6);
-        $precioTotal = $calculadora->calcularPrecioTotal($request);
-        // dd($reservaKey);
+        $totaldays = $calendar->calculate_total_days($checkin, $checkout);
+        $precioTotal = $calculadora->calcularPrecioTotal($request, $totaldays);
 
-
-        // dd($precioTotal);
-        // Reserva::create($request->all());
         Reserva::create([
             'reservation_key' => $reservaKey,
             'name' => $request->name,
-            'mail' => $request->mail, 
-            'phone' => $request->phone, 
-            'check_in' => $request->check_in, 
-            'check_out' => $request->check_out, 
-            'persons' => $request->persons, 
-            'pet' => $request->pet, 
+            'mail' => $request->mail,
+            'phone' => $request->phone,
+            'check_in' => $request->check_in,
+            'check_out' => $request->check_out,
+            'persons' => $request->persons,
+            'pet' => $request->pet,
             'breakfast' => $request->breakfast,
-            'estancia_id' => $request->estancia_id, 
-            'phone' => $request->phone, 
-            'total_price' => $precioTotal
-            
+            'estancia_id' => $request->estancia_id,
+            'phone' => $request->phone,
+            'total_price' => $precioTotal,
+
         ]);
-        
+
         return redirect(route('reserva.index'));
     }
 
@@ -75,9 +76,8 @@ class ReservaController extends Controller
      */
     public function edit(Reserva $reserva)
     {
-      
-        
-        return view('reserva.edit',['reserva'=>$reserva]);
+
+        return view('reserva.edit', ['reserva' => $reserva]);
     }
 
     /**
@@ -91,26 +91,20 @@ class ReservaController extends Controller
     {
         $calculadora = new Calculadora();
         $precioTotal = $calculadora->calcularPrecioTotal($request);
-           
-            $reserva->update([
-                'name' => $request->name,
-                'mail' => $request->mail, 
-                'phone' => $request->phone, 
-                'check_in' => $request->check_in, 
-                'check_out' => $request->check_out, 
-                'persons' => $request->persons, 
-                'pet' => $request->pet, 
-                'breakfast' => $request->breakfast,
-                'estancia_id' => $request->estancia_id, 
-                'phone' => $request->phone, 
-                'total_price' => $precioTotal]);
 
-        
+        $reserva->update([
+            'name' => $request->name,
+            'mail' => $request->mail,
+            'phone' => $request->phone,
+            'check_in' => $request->check_in,
+            'check_out' => $request->check_out,
+            'persons' => $request->persons,
+            'pet' => $request->pet,
+            'breakfast' => $request->breakfast,
+            'estancia_id' => $request->estancia_id,
+            'phone' => $request->phone,
+            'total_price' => $precioTotal]);
 
-        
-        
-  
-        
         return redirect(route('reserva.index'));
     }
 

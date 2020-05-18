@@ -1,0 +1,9 @@
+.img-text-right {
+    display: flex;
+    align-items: center;
+    img {
+      width: 50%;
+      height: 500px;
+      object-fit: cover;
+    } 
+}

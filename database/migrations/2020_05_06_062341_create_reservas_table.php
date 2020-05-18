@@ -26,8 +26,8 @@ class CreateReservasTable extends Migration
             $table->boolean('pet')->default(false)->nullable();
             $table->boolean('breakfast')->default(false)->nullable();
             $table->integer('total_price')->nullable();
-            $table->foreignId('estancias_id')->nullable();
-            $table->foreign('estancias_id')->references('id')->on('estancias');
+            $table->foreignId('estancia_id')->nullable();
+            $table->foreign('estancia_id')->references('id')->on('estancias');
             $table->timestamps();
         });
     }

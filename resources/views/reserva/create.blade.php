@@ -45,7 +45,7 @@
         </div>
          <div class="col-12 col-md-4">
          <br><label><b>Habitacion</b></label>
-        <br> <select class="col-md-12 form-control" name="estancias_id" id="">
+        <br> <select class="col-md-12 form-control" name="estancia_id" id="">
             <option value="1">Puigraciós</option>
             <option value="2">Estança de Sant Cristofol</option>
             <option value="3">Estança de la Roca Centella</option>
@@ -71,7 +71,7 @@
       <br>
       <div class="d-flex justify-content-between">
         <a href="/reserva" class="btn btn-link"><span style="padding-right:8px"><i class="fas fa-chevron-left"></i></span>Volver al listado</a>
-        <input type="submit" class="btn btn-primary btn-xs" value="Actualizar Reserva">
+        <input type="submit" class="btn btn-primary btn-xs" value="Crear reserva">
       </div>
     </form>
    

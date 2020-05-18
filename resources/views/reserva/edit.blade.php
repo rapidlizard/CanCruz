@@ -56,14 +56,14 @@
           <label><b>Desayuno</b>
            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            <b>Si</b>
-           <input type="radio" name="breakfast" value=1
+           <input type="radio" name="breakfast" value="1"
             @if($reserva->breakfast == 1)
             checked
             @endif
            >
            </label>
            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <b>No</b><input type="radio" name="breakfast" value=0
+           <b>No</b><input type="radio" name="breakfast" value="0"
            @if($reserva->breakfast == 0)
             checked
             @endif
@@ -74,7 +74,11 @@
         <div class="col-12 col-md-4">
           <br>
           <label><b>Habitción</b></label>
-          <input type="email" name="mail" class="form-control" value="{{$reserva->estancias_id}}">
+          <select class="col-md-12 form-control" name="estancia_id" id="">
+            <option value="1">Puigraciós</option>
+            <option value="2">Sant Cristofol</option>
+            <option value="3">Roca Centella</option>
+          </select>
         </div>
 
         <div class="col-12 col-md-4">

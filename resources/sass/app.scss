@@ -1,8 +1,26 @@
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Reset
+@import 'reset';
 
 // Variables
 @import 'variables';
 
+// Mixins
+@import 'mixin';
+
+// Typography
+@import 'typography';
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Layout
+@import 'layout';
+
+// Components
+@import 'components';
+@import 'nav';
+@import 'img-caption';
+@import 'img-text-right';
+@import 'text-img-bg';
+@import 'img-text-left';
+@import 'images';

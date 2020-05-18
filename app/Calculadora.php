@@ -17,13 +17,13 @@ class Calculadora extends Model
     private $petPrice;
     private $roomPrice;
 
-    // public function __construct()
-    // {
-    //      $data = DB::table('calculadoras')->get();
-    //      $this->roomPrice = $data[2]->price;
-    //      $this->breakfastPrice = $data[0]->price;
-    //      $this->petPrice = $data[1]->price;
-    // }
+    public function __construct()
+    {
+         $data = DB::table('calculadoras')->get();
+         $this->roomPrice = $data[2]->price;
+         $this->breakfastPrice = $data[0]->price;
+         $this->petPrice = $data[1]->price;
+    }
 
     public function calcularPrecioTotal(Request $request)
     {

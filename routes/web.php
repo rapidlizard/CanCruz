@@ -41,6 +41,3 @@ Route::get('/puigracios','PagesController@puigracios');
 Route::get('/santcristofol','PagesController@santcristofol');
 
 Route::get('/rocacentella','PagesController@rocacentella');
-
-
-

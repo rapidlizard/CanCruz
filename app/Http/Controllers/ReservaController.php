@@ -14,8 +14,8 @@ class ReservaController extends Controller
     public function index()
     {
         $reservas = Reserva::all();
-        return view('reserva.index',['reservas'=>$reservas]);
-
+        $calendar = new Calendar();
+        return view('reserva.index',['reservas' => $reservas, 'calendar' => $calendar]);
     }
 
     public function create()
@@ -57,40 +57,28 @@ class ReservaController extends Controller
         return redirect(route('reserva.index'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Reserva  $reserva
-     * @return \Illuminate\Http\Response
-     */
     public function show(Reserva $reserva)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Reserva  $reserva
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Reserva $reserva)
     {
 
         return view('reserva.edit', ['reserva' => $reserva]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Reserva  $reserva
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Reserva $reserva)
     {
+        $calendar = new Calendar();
         $calculadora = new Calculadora();
-        $precioTotal = $calculadora->calcularPrecioTotal($request);
+
+        $checkin = $request->check_in;
+        $checkout = $request->check_out;
+
+        $totaldays = $calendar->calculate_total_days($checkin, $checkout);
+        $precioTotal = $calculadora->calcularPrecioTotal($request, $totaldays);
 
         $reserva->update([
             'name' => $request->name,
@@ -108,12 +96,6 @@ class ReservaController extends Controller
         return redirect(route('reserva.index'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Reserva  $reserva
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Reserva $reserva)
     {
         $reserva->delete();

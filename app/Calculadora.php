@@ -19,10 +19,10 @@ class Calculadora extends Model
 
     public function __construct()
     {
-          $data = DB::table('calculadoras')->get();
-          $this->roomPrice = $data[2]->price;
-          $this->breakfastPrice = $data[0]->price;
-          $this->petPrice = $data[1]->price;
+        $data = DB::table('calculadoras')->get();
+        $this->roomPrice = $data[2]->price;
+        $this->breakfastPrice = $data[0]->price;
+        $this->petPrice = $data[1]->price;
     }
 
     public function calcularPrecioTotal(Request $request, int $totaldays)

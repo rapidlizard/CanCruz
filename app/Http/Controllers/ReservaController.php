@@ -15,6 +15,7 @@ class ReservaController extends Controller
     {
         $reservas = Reserva::all();
         $calendar = new Calendar();
+
         return view('reserva.index',['reservas' => $reservas, 'calendar' => $calendar]);
     }
 
@@ -37,7 +38,8 @@ class ReservaController extends Controller
         $reservaKey = $reserva->generateRandomString(6);
         $totaldays = $calendar->calculate_total_days($checkin, $checkout);
         $precioTotal = $calculadora->calcularPrecioTotal($request, $totaldays);
-
+        $dates = $calendar->get_all_dates($checkin, $checkout);
+        
         Reserva::create([
             'reservation_key' => $reservaKey,
             'name' => $request->name,

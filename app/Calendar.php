@@ -10,7 +10,7 @@ use \DatePeriod;
 
 class Calendar extends Model
 {
-    public function calculate_total_days($check_in, $check_out)
+    public static function calculate_total_days($check_in, $check_out)
     {
         $checkin = new DateTime($check_in);
         $checkout = new DateTime($check_out);

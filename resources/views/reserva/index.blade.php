@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@inject('calendar','App\Calendar')
 <div class="container">
 
 
@@ -37,7 +38,7 @@
                 <td>{{$reserva->check_out}}</td>
                 <td>
                     {{
-                        $calendar->calculate_total_days($reserva->check_in, $reserva->check_out)
+                        $calendar::calculate_total_days($reserva->check_in, $reserva->check_out)
                     }}
                 </td>
                 

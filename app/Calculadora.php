@@ -12,7 +12,6 @@ class Calculadora extends Model
     protected $fillable = ['name', 'price'];
 
     private $totalPrice;
-
     private $breakfastPrice;
     private $petPrice;
     private $roomPrice;
@@ -32,7 +31,6 @@ class Calculadora extends Model
         $breakfastPrice = $basicPrice + $this->breakfastPrice * $request->persons * $totaldays;
         $completePrice = $basicPrice + $this->breakfastPrice * $request->persons * $totaldays + $this->petPrice;
 
-
         if ($request->breakfast == 1 and $request->pet == 1) {
             return $completePrice;
         }
@@ -40,7 +38,6 @@ class Calculadora extends Model
             return $petPrice;
         }
         if ($request->breakfast == 1) {
-
             return $breakfastPrice;
         }
         if ($request->breakfast == 0 and $request->pet == 0) {

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div>
         <h1>Añadir una reserva</h1>
@@ -57,8 +58,8 @@
          </select>
         </div>
         <div class="col-12 col-md-4">
-           <br> <label><b>Nombre</b></label>
-            <input type="text" name="name" class="form-control">
+            <br> <label><b>Nombre</b></label>
+            <input type="text" name="name" class="form-control" >
         </div>
        
 
@@ -76,23 +77,14 @@
       <br>
       <div class="d-flex justify-content-between">
         <a href="/reserva" class="btn btn-link"><span style="padding-right:8px"><i class="fas fa-chevron-left"></i></span>Volver al listado</a>
-        <input type="submit" class="btn btn-primary btn-xs" value="Crear reserva">
+        <div>
+          <input type="submit" class="btn btn-primary btn-xs" value="Crear reserva">
+        
+        </div>
       </div>
     </form>
 
-<!-- ///////  script para calendario de ejemplo -->
 
-<!--     <script type="text/javascript">  
-        $('#startdate').datepicker({ 
-            autoclose: true,   
-            format: 'yyyy-mm-dd'  
-         });
-         $('#enddate').datepicker({ 
-            autoclose: true,   
-            format: 'yyyy-mm-dd'
-         }); 
-    </script>
-    -->
 
 </div>
 @endsection

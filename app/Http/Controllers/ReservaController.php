@@ -19,11 +19,10 @@ class ReservaController extends Controller
         return view('reserva.index',['reservas' => $reservas, 'calendar' => $calendar]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
-   /*   $calendar = New Calendar; 
-        */
-        return view('reserva.create');
+        $reserva = new ReservaController();
+        return view('reserva.create', ['request' => $request, 'reserva' => $reserva]);
     }
 
     public function store(Request $request)
@@ -31,15 +30,18 @@ class ReservaController extends Controller
         $reserva = new Reserva();
         $calculadora = new Calculadora();
         $calendar = new Calendar();
+    
 
         $checkin = $request->check_in;
         $checkout = $request->check_out;
+
 
         $reservaKey = $reserva->generateRandomString(6);
         $totaldays = $calendar->calculate_total_days($checkin, $checkout);
         $precioTotal = $calculadora->calcularPrecioTotal($request, $totaldays);
         $dates = $calendar->get_all_dates($checkin, $checkout);
-        
+
+
         Reserva::create([
             'reservation_key' => $reservaKey,
             'name' => $request->name,
@@ -57,6 +59,24 @@ class ReservaController extends Controller
         ]);
 
         return redirect(route('reserva.index'));
+
+    }
+
+    public function validate_dates(Request $request)
+    {
+        
+        $checkin = $request->check_in;
+        $checkout = $request->check_out;
+
+        if($checkin>$checkout)
+        {
+            
+            return false;
+        }
+        if($checkin<$checkout)
+        {
+            return;
+        }
     }
 
     public function show(Reserva $reserva)

@@ -20,7 +20,12 @@
         
         <div class="col-12 col-md-4">
             <br><label><b>Personas</b></label>
-            <input  class="form-control" type="number" name="persons" class="form-control">
+          <select class="col-md-12 form-control" name="persons" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
         </div>
        
         <div class=" col-12 col-md-4">

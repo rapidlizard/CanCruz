@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Calendar;
 use App\Calculadora;
 use App\Reserva;
-use App\Services;
+use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -20,25 +20,19 @@ class ReservaController extends Controller
 
     public function create(Request $request)
     {
-        $servicesList = Services::get_all_services();
-        dd($servicesList);
         $error = null;
         return view('reserva.create', ['request' => $request, 'error' => $error]);
     }
 
     public function store(Request $request)
     {
-        $calculadora = new Calculadora();
-
-        $validate = $this->validate_dates($request->check_in, $request->check_out);
-        if($validate == false) {
+        $validate = Reserva::validate_dates($request->check_in, $request->check_out);
+        if($validate === false) {
             $error = "wrong dates";
             return view('reserva.create', ['request' => $request, 'error' => $error]);
         }
 
         $reservaKey = Reserva::generateRandomString(6);
-        $totalDays = Calendar::calculate_total_days($request->check_in, $request->check_out);
-        $precioTotal = $calculadora->calcularPrecioTotal($request, $totalDays);
 
         Reserva::create([
             'reservation_key' => $reservaKey,
@@ -56,18 +50,6 @@ class ReservaController extends Controller
         ]);
 
         return redirect(route('reserva.index'));
-    }
-
-    public function validate_dates($checkin, $checkout)
-    {
-        if($checkin>$checkout)
-        {
-            return false;
-        }
-        if($checkin<$checkout)
-        {
-            return;
-        }
     }
 
     public function show(Reserva $reserva)

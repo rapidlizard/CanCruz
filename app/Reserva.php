@@ -2,7 +2,11 @@
 
 namespace App;
 
+use App\ServiceCalculator;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use \DateTime;
 
 class Reserva extends Model
 {
@@ -17,8 +21,22 @@ class Reserva extends Model
     public static function generateRandomString($length) 
     { 
         return substr(str_shuffle("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
-    } 
+    }
+    
+    public static function validate_dates($checkin, $checkout)
+    {
+        $firstDate = new DateTime($checkin);
+        $secondDate = new DateTime($checkout);
 
+        if($firstDate > $secondDate)
+        {
+            return false;
+        }
+        if($firstDate < $secondDate)
+        {
+            return;
+        }
+    }
 }
 
 

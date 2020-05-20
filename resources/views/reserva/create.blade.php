@@ -70,7 +70,7 @@
       
         <div class="col-12 col-md-4">
         <br><label><b>Teléfono</b></label>
-        <input type="text" name="phone" class="form-control">
+        <input type="text" name="phone" class="form-control" value="{{$request->phone}}">
         </div>
     </div>
         <br>
@@ -79,12 +79,9 @@
         <a href="/reserva" class="btn btn-link"><span style="padding-right:8px"><i class="fas fa-chevron-left"></i></span>Volver al listado</a>
         <div>
           <input type="submit" class="btn btn-primary btn-xs" value="Crear reserva">
-        
+            {{$error}}
         </div>
       </div>
     </form>
-
-
-
 </div>
 @endsection

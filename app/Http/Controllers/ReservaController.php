@@ -19,12 +19,19 @@ class ReservaController extends Controller
 
     public function create(Request $request)
     {
-        return view('reserva.create');
+        $error = null;
+        return view('reserva.create', ['request' => $request, 'error' => $error]);
     }
 
     public function store(Request $request)
     {
         $calculadora = new Calculadora();
+
+        $validate = $this->validate_dates($request->check_in, $request->check_out);
+        if($validate == false) {
+            $error = "wrong dates";
+            return view('reserva.create', ['request' => $request, 'error' => $error]);
+        }
 
         $reservaKey = Reserva::generateRandomString(6);
         $totalDays = Calendar::calculate_total_days($request->check_in, $request->check_out);

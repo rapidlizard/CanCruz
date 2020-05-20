@@ -12,13 +12,12 @@ class Reserva extends Model
 {
     protected $fillable = ['check_in','check_out','persons','pet','name','mail','phone','estancia_id','breakfast','created_at','updated_at','total_price','reservation_key'];
 
-    
     public function Estancia()
     {
         return $this->belongsTo(Estancia::class);
     }
 
-    public static function generateRandomString($length) 
+    public static function generateKey($length) 
     { 
         return substr(str_shuffle("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
     }

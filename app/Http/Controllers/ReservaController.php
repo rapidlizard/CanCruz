@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Calendar;
-use App\Calculadora;
+use App\ServiceCalculator;
 use App\Reserva;
 use App\Service;
 use Illuminate\Http\Request;
@@ -26,13 +26,27 @@ class ReservaController extends Controller
 
     public function store(Request $request)
     {
-        $validate = Reserva::validate_dates($request->check_in, $request->check_out);
-        if($validate === false) {
-            $error = "wrong dates";
+        if(Reserva::validate_dates($request->check_in, $request->check_out) === false) {
+            $error = "Please make sure that your check in day is before your check out day";
             return view('reserva.create', ['request' => $request, 'error' => $error]);
         }
 
-        $reservaKey = Reserva::generateRandomString(6);
+        $days = Calendar::calculate_total_days($request->check_in, $request->check_out);
+
+        $room = Service::where('name','=','room')->first();
+        $pet = Service::where('name','=','pet')->first();
+        $breakfast = Service::where('name','=','breakfast')->first();
+
+        $price = ServiceCalculator::get_price_for_all_days($days, ServiceCalculator::get_price_per_day($request->persons, $room));
+
+        if($request->breakfast == 1) {
+            $price += ServiceCalculator::get_price_for_all_days($days, ServiceCalculator::get_price_per_day($request->persons, $breakfast));
+        }
+        if($request->pet == 1){
+            $price += $pet->price;
+        }
+
+        $reservaKey = Reserva::generateKey($keylenght = 6);
 
         Reserva::create([
             'reservation_key' => $reservaKey,
@@ -46,7 +60,7 @@ class ReservaController extends Controller
             'breakfast' => $request->breakfast,
             'estancia_id' => $request->estancia_id,
             'phone' => $request->phone,
-            'total_price' => $precioTotal,
+            'total_price' => $price,
         ]);
 
         return redirect(route('reserva.index'));
@@ -60,7 +74,6 @@ class ReservaController extends Controller
     {
         return view('reserva.edit', ['reserva' => $reserva]);
     }
-
 
     public function update(Request $request, Reserva $reserva)
     {
@@ -80,7 +93,7 @@ class ReservaController extends Controller
             'breakfast' => $request->breakfast,
             'estancia_id' => $request->estancia_id,
             'phone' => $request->phone,
-            'total_price' => $precioTotal
+            // 'total_price' => $precioTotal
         ]);
 
         return redirect(route('reserva.index'));

@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="container">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{$error}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <div>
         <h1>Añadir una reserva</h1>
     </div>
@@ -21,23 +26,23 @@
         
         <div class="col-12 col-md-4">
             <br><label><b>Personas</b></label>
-          <select class="col-md-12 form-control" name="persons" id="">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
+            <select class="col-md-12 form-control" name="persons" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                </select>
         </div>
        
         <div class=" col-12 col-md-4">
             <br><br><label><b>Mascota</b>
-           <label><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <b>Si</b>&nbsp;&nbsp;
-           <input type="radio" name="pet" value=1></label>
-           <label><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           <b>No</b>&nbsp;&nbsp;
-           <input type="radio" name="pet" value=0>
-          </label>
+            <label><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b>Si</b>&nbsp;&nbsp;
+            <input type="radio" name="pet" value=1></label>
+            <label><label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <b>No</b>&nbsp;&nbsp;
+            <input type="radio" name="pet" value=0>
+            </label>
         </div>
         <div class=" col-12 col-md-4">
            <br> <br><label><b>Desayuno</b>
@@ -79,7 +84,7 @@
         <a href="/reserva" class="btn btn-link"><span style="padding-right:8px"><i class="fas fa-chevron-left"></i></span>Volver al listado</a>
         <div>
           <input type="submit" class="btn btn-primary btn-xs" value="Crear reserva">
-            {{$error}}
+            
         </div>
       </div>
     </form>

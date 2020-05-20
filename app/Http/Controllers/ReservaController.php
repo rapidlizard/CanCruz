@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Calendar;
 use App\Calculadora;
 use App\Reserva;
+use App\Services;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -19,6 +20,8 @@ class ReservaController extends Controller
 
     public function create(Request $request)
     {
+        $servicesList = Services::get_all_services();
+        dd($servicesList);
         $error = null;
         return view('reserva.create', ['request' => $request, 'error' => $error]);
     }

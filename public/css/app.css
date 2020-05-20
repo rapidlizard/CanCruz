@@ -10981,6 +10981,10 @@ section {
   color: black !important;
 }
 
+#selected-person {
+  display: none !important;
+}
+
 header {
   display: block;
 }

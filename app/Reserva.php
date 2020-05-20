@@ -14,7 +14,7 @@ class Reserva extends Model
         return $this->belongsTo(Estancia::class);
     }
 
-    function generateRandomString($length) 
+    public static function generateRandomString($length) 
     { 
         return substr(str_shuffle("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
     } 

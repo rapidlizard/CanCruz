@@ -17,9 +17,9 @@
         url("https://images.unsplash.com/photo-1505916349660-8d91a99c3e23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-   
+    background-position: center;   
 }
+
 
 .bg-estancia1-price {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -27,6 +27,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 777px;
+    width: 700px;
     height: 500px;
+}
+
+.gallery{
+    width: 100%;
+    height: 100%;
+    img{
+        width: 100%;
+        height: 500px;
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover;
+    }
 }

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+        <title>{{ config('app.name', 'Laravel') }}</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+            integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+            crossorigin="anonymous"
+        />
+
+        <!-- Styles -->
+        <link href="../public/css/app.css" rel="stylesheet" />
+    </head>
+    <body>
+
+<!--     <include src=""></include> -->
+
+        <main>
+
+            <section>
+                <div class="h2texto">
+                    <h2>Huerto y cocina ecólógica</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+            </section>
+
+            <section class="img-text-intro">
+                <img src="https://images.unsplash.com/photo-1475948164756-9a56289068fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1414&q=80" alt="fresh tomato of tree">
+                <div>
+                    <p>L’assortiment de fruites i verdures així com els ous, 
+                        en primer moment i segons temporada  son les hortalisses 
+                        i verdures les que disposem del nostre hort i del galliner 
+                        així com la mel dels nostres camps; Les que incorporem de 
+                        producció aliena procedeixen dels pagesos de les rodalies 
+                        així com l’oli d’oliva de La Garriga (estem en recuperació 
+                        del camp d’oliveres),els làctics i formatges son elaborats 
+                        per artesans en obradors dels veïnats de Tagamanent del Figaró, 
+                        així amb els productes propis i aliens  cobrim les necessitats 
+                        per l’elaboració  de tots els àpats en règim de pensió, 
+                        i en quant als productes aliens tals com farines (elaborem al pa), 
+                        pastes, arrossos i cafè   tenim com a principi  la proximitat i 
+                        l’ètica. </p>
+                </div>
+            </section>
+
+            <section class="img-2col">
+                <img src="https://images.unsplash.com/photo-1501841633380-7de96991a027?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80">
+                <img src="https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
+            </section>
+
+            <section class="quote-text">
+                <h3>Alimentos de producción propia <br>y de proximidad</h3>
+                <p>El surtido de frutas y verduras así como los huevos, en primer momento y según temporada son las hortalizas y verduras las que disponemos de nuestra huerta y del gallinero así como la miel de nuestros campos.</p>
+            </section>
+
+            <!-- Slideshow container // hay un javascript --> 
+            <section class="slider">
+                <img src="https://images.unsplash.com/photo-1534533983688-c7b8e13fd3b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
+ <!--                <img src="https://images.unsplash.com/photo-1530062845289-9109b2c9c868?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80">
+                <img src="https://images.unsplash.com/photo-1485795046599-702122cd1267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">    -->
+            </section>
+
+            <section class="subtitle-text-2col">
+                <h3>Lorem ipsum amet, consectetur adipiscing elit.</h3>
+                <div class="text-2col">
+                    <div class="col">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Donec gravida malesuada lorem id porta. Nam volutpat ligula elementum arcu blandit placerat.
+                            Duis ac neque eu ante elementum dictum eu sed ante. Pellentesque sodales po.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida malesuada lorem id porta. Nam volutpat ligula elementum arcu blandit placerat. Duis ac neque eu ante elementum dictum eu sed ante. Pellentesque sodales po.</p>
+                    </div>
+                    <div class="col"> 
+                        <p class="col">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Donec gravida malesuada lorem id porta.
+                            Nam volutpat ligula elementum arcu blandit placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Donec gravida malesuada lorem id porta. Nam volutpat ligula elementum arcu blandit placerat.
+                            Duis ac neque eu ante elementum dictum eu sed ante. Pellentesque sodales po.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="img-2col">
+                <img src="https://images.unsplash.com/photo-1551276929-3f75211e0986?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1208&q=80">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
+            </section>
+
+        </main>
+
+<!--         <include src=""></include>
+ -->
+    </body>
+</html>

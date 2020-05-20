@@ -17,6 +17,11 @@ html {
   box-sizing: inherit;
 }
 
+p {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 h1 {
   font-size: 48px !important;
   font-family: "DM Mono", monospace !important;
@@ -43,6 +48,11 @@ a {
   font-weight: bold !important;
   font-family: "DM Mono", monospace !important;
   text-decoration: underline !important;
+}
+
+label {
+  font-size: 16px !important;
+  font-family: "DM Mono", monospace !important;
 }
 
 /*!
@@ -10945,6 +10955,12 @@ section {
   margin-bottom: 20px;
 }
 
+.subtitle-text-2col {
+  margin-left: 160px;
+  margin-right: 160px;
+  margin-bottom: 60px;
+}
+
 .flex-3-items {
   display: flex;
   justify-content: space-evenly;
@@ -10959,6 +10975,10 @@ section {
   max-width: 1400px;
   margin: 0 auto;
   padding: 10px 10px;
+}
+
+.h3texto-right {
+  padding: 20px 0;
 }
 
 .caption {
@@ -11009,6 +11029,11 @@ section {
   padding-bottom: 15px;
 }
 
+.checkbox label {
+  padding-left: 5px;
+  font-size: 14px !important;
+}
+
 .cta {
   background-color: #967361;
   color: white;
@@ -11016,6 +11041,47 @@ section {
   border: none;
   width: 100%;
   margin-top: 30px;
+}
+
+.quote-text {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+
+.img-description {
+  width: 700px;
+}
+
+.calculadora-precio {
+  margin-bottom: 40px;
+  /*  align-items: flex-end; QUEREMOS ALINEARLO ABAJO CON EL CTA */
+}
+
+.form-calculadora {
+  flex: row !important;
+  align-items: flex-end;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px !important;
+  font-family: "DM Mono", monospace !important;
+}
+
+.icon i {
+  padding: 10px;
+}
+
+.text-2col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30px;
 }
 
 header {
@@ -11064,6 +11130,7 @@ header .headerContent {
   padding: 10px 10px;
   height: 400px;
   padding-top: 150px;
+  padding-left: 80px;
   color: white;
 }
 
@@ -11143,8 +11210,22 @@ header .headerContent {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 777px;
+  width: 700px;
   height: 500px;
+}
+
+.gallery {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery img {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .h2-texto-wideimg a {
@@ -11202,5 +11283,138 @@ header .headerContent {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+}
+
+.card-estancia {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px;
+}
+
+.header-basic {
+  display: block;
+}
+
+.header-basic .header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #967361;
+  font-family: "DM Mono", monospace;
+}
+
+.header-basic .header span {
+  font-size: 48px;
+}
+
+.header-basic .header .headerNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-basic .header .headerNav nav a {
+  color: #967361 !important;
+  margin: 0 10px;
+  text-transform: lowercase;
+  text-decoration: none !important;
+}
+
+.header-basic .header button {
+  color: white;
+  background-color: #967361;
+  border-radius: 2px;
+  border: none;
+  width: 120px;
+  height: 50px;
+}
+
+.header-basic .headerContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 10px;
+  height: 400px;
+  padding-top: 150px;
+  color: white;
+}
+
+.img-text-intro {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.img-text-intro img {
+  width: 650px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-text-intro div {
+  padding: 60px;
+  width: 650px;
+  height: 500px;
+}
+
+.quote-text {
+  padding-top: 80px;
+  display: block;
+}
+
+.quote-text h3 {
+  padding-bottom: 30px;
+}
+
+.img-2col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.img-2col img {
+  width: 650px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider {
+  width: 100%;
+  height: 600px;
+}
+
+.slider img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.map-data {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.map-data .data {
+  padding: 60px;
+  width: 650px;
+  height: 500px;
+}
+
+.map-data .map {
+  padding: 60px;
+  width: 650px;
+  height: 500px;
+  background-color: #929292;
 }
 

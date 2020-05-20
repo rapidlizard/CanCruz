@@ -60,9 +60,28 @@
                     </p>
                 </div>
                 <div class="card-estancia">
-                    <div class="estancia-img-price bg-estancia1-price">
+                    <div class="img-description">
+                        <div class="estancia-img-price bg-estancia1-price">
                         <p><strong>48&euro;</strong>/noche</p>
+                        </div>
+                        <div class="title-text-icons">
+                            <div class="h3texto-right">
+                                <h3>NOMBRE DE LA ESTANCIA</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                    Praesent condimentum non mauris id sagittis. Nullam ullamcorper, 
+                                    leo at fermentum varius, mauris urna tristique ligula, 
+                                    a pretium augue neque eu augue.
+                                </p>
+                            </div>
+                            <div class="icon">
+                                <span><i class="fas fa-users"></i>máx. 4 personas</span>
+                                <span><i class="fas fa-dog"></i>mascotas permitidas</span>
+                            </div>
+                        </div>
                     </div>
+                    <!-- <div class="form-calculadora"></div>  para alinear los 2 elementos de la derecha con el bottom-->
+
                     <div class="estancia-form">
                         <form action="">
                             <div class="block">
@@ -95,12 +114,67 @@
                                 </label>
                             </div>
                             <div>
-                                <button class="cta">Calcular Precio</button>
+                                <button class="cta"><p>Continuar reserva</p></button>
                             </div>
                         </form>
                     </div>
+                    <div class="calculadora-precio">
+                            <h3>
+                                TOTAL
+                                <strong>
+                                    341 €<!--  {{$precio-total}} -->
+                                </strong>
+                            </h3>
+                    </div>
+
+                    <!-- new -->
+
                 </div>
             </section>
+
+            <section class="cross-selling flex-row">
+                <h2>Otras estancias</h2>
+                <div class="card-small-estancia">
+                    <img>
+                    <div class="h3texto">
+                        <h3>NOMBRE DE LA ESTANCIA</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p> 
+                    </div>
+                    <div class="icon">
+                        <span><i class="fas fa-users"></i><p>máx. 4 personas</p></span>
+                        <span><i class="fas fa-dog"></i><p>mascotas permitidas</p></span>
+                    </div>
+                </div>
+                <div class="card-small-estancia">
+                    <img>
+                    <div class="h3texto">
+                        <h3>NOMBRE DE LA ESTANCIA</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p> 
+                    </div>
+                    <div class="icons">
+                        <span><i class="fas fa-users"></i>máx. 4 personas</span>
+                        <span><i class="fas fa-dog"></i>mascotas permitidas</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="gallery-text">
+                
+                <!-- Slideshow // ver el slideshow de huerto_cocina -->
+
+                <h2>Huerto y cocina ecologica</h2>
+                <p>
+                    Elaboramos las comidas con recetas sencillas y
+                    saludables, dando el mayor protagonismo a los sabores
+                    originales que nos dan los productos de excepcional.
+                    Porque nuestros huéspedes lo disfruten en la
+                    tranquilidad de nuestro entorno.
+                </p>
+            </div>
         </main>
 
         <footer class="site-footer">

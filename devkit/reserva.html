@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+        <title>{{ config('app.name', 'Laravel') }}</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+            integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+            crossorigin="anonymous"
+        />
+
+        <!-- Styles -->
+        <link href="../public/css/app.css" rel="stylesheet" />
+    </head>
+    <body>
+
+<!--     <include src=""></include> -->
+
+        <main>
+            <section>
+                <div class="h2texto">
+                    <h2>Haz tu reserva</h2>
+                </div>
+            </section>
+
+            <div class="stepper-reserva">
+                <div class="stepper">
+              
+                  <!-- Stepers Wrapper -->
+                  <ul class="stepper stepper-vertical">
+              
+                    <!-- First Step -->
+                    <li class="completed">
+                      <a href="#!">
+                        <span class="circle">1</span>
+                        <span class="label">Datos de reserva</span>
+                      </a>
+                    </li>
+              
+                    <!-- Second Step -->
+                    <li class="active">
+                      <a href="#!">
+                        <span class="circle">2</span>
+                        <span class="label">Datos de contacto</span>
+                      </a>
+                    </li>
+              
+                  </ul>
+                  <!-- /.Stepers Wrapper -->
+              
+                </div>
+            </div>
+
+            <section class="selection-estancia flex-column">
+                <h2>Selecciona estancia</h2>
+                <div class="card-small-estancia">
+                    <!--     imagen con checkbox en la esquina superior derecha, a 10px -->
+                    <img class="img-checkbox">
+                    <div class="h3texto">
+                        <h3>NOMBRE DE LA ESTANCIA</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p> 
+                    </div>
+                    <div class="icons">
+                        <span><i class="fas fa-users"></i>máx. 4 personas</span>
+                        <span><i class="fas fa-dog"></i>mascotas permitidas</span>
+                    </div>
+                </div>
+                <div class="card-small-estancia">
+                    <!--     imagen con checkbox en la esquina superior derecha, a 10px -->
+                    <img class="img-checkbox">
+                    <div class="h3texto">
+                        <h3>NOMBRE DE LA ESTANCIA</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p> 
+                    </div>
+                    <div class="icons">
+                        <span><i class="fas fa-users"></i>máx. 4 personas</span>
+                        <span><i class="fas fa-dog"></i>mascotas permitidas</span>
+                    </div>
+                </div>
+                <div class="card-small-estancia">
+                    <!--     imagen con checkbox en la esquina superior derecha, a 10px -->
+                    <img class="img-checkbox">
+                    <div class="h3texto">
+                        <h3>NOMBRE DE LA ESTANCIA</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p> 
+                    </div>
+                    <div class="icons">
+                        <span><i class="fas fa-users"></i>máx. 4 personas</span>
+                        <span><i class="fas fa-dog"></i>mascotas permitidas</span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>datos de reserva</h2>
+                <div class="estancia-form">
+                    <form action="">
+                        <div class="block">
+                            <label>Numero de Personas</label>
+                            <select name="persons" id="">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="block">
+                            <label>Check in</label>
+                            <input type="date" name="check_in" id="" />
+                        </div>
+                        <div class="block">
+                            <label>Check out</label>
+                            <input type="date" name="check_out" id="" />
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="pet" id="" />
+                            <label class="radio-label">
+                                Llevo Mascota (+5&euro;)
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="breakfast" id="" />
+                            <label class="radio-label">
+                                Con desayuno (+12&euro;/persona)
+                            </label>
+                        </div>
+                        <div>
+                            <button class="cta">Calcular Precio</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            
+        </main>
+
+<!--         <include src=""></include>
+ -->
+    </body>
+</html>

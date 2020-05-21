@@ -25,8 +25,7 @@ Route::resource('reserva','ReservaController')->middleware('auth');
 
 Route::resource('estancia','EstanciaController');
 
-Route::resource('calculadora','CalculadoraController');
-
+Route::resource('pages','PagesController');
 
 
 Route::get('/masia','PagesController@masia');
@@ -45,3 +44,6 @@ Route::get('/rocacentella','PagesController@rocacentella');
 
 Route::get('/reserva_usuario_first','PagesController@reserva_usuario_first');
 
+Route::get('/reserva_usuario_second','PagesController@reserva_usuario_second');
+
+Route::get('/success','PagesController@success');

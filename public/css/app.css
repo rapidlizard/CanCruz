@@ -12731,6 +12731,10 @@ section {
   color: #967361 !important;
 }
 
+.reserva-contacto .hidden-input {
+  display: none;
+}
+
 header {
   display: block;
 }

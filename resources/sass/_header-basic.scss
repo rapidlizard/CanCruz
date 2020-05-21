@@ -9,10 +9,24 @@
         color: #967361;
         font-family: $font;
 
-        span {
-            font-size: 48px;
+        a {
+            color: white !important;
+            text-decoration: none !important;
         }
 
+        a:hover {
+            color: #47372e !important;
+        }
+        
+        h1 {
+            
+            a {
+                font-weight: 400 !important;
+                font-size: 48px !important;
+                color: #967361 !important;
+            }
+        }
+        
         .headerNav {
             display: flex;
             flex-direction: column;
@@ -24,6 +38,10 @@
                     text-transform: lowercase;
                     text-decoration: none !important;
                 }
+
+                a:hover {
+                    color: #47372e !important;
+                }        
             }
         }
 
@@ -34,6 +52,13 @@
             border: none;
             width: 120px;
             height: 50px;
+        }
+
+        button:hover {
+            background-color: #3d2f27;
+            a {
+                color: white !important;
+            }
         }
     }
 

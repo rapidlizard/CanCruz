@@ -84,7 +84,7 @@
 
                 <div class="img-text-left">
                     <img
-                        src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+                        src="./images/verduras.jpg"
                         alt="vegetables"
                     />
                     <div class="text-square-half">

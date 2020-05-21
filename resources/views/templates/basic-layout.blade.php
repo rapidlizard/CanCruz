@@ -45,7 +45,7 @@
 
     <header class="header-basic">
         <div class="header">
-            <span href="{{url('/welcome/')}}">Can Cruz</span>
+            <h1><a href="{{url('/')}}">Can Cruz</a></h1>
             <div class="headerNav">
                 <nav>
                 <a href="{{url('/masia/')}}">La Masía</a>
@@ -70,17 +70,9 @@
     <footer class="site-footer">
             <div class="logo-footer">
                 <img
-                    src="https://cdn.shopify.com/shopifycloud/hatchful-web/assets/6fcc76cfd1c59f44d43a485167fb3139.png"
+                    src="./images/logo_canplans.jpg"
                     alt=""
                 />
-            </div>
-            <div class="nav-footer">
-                <a href="">La Masia</a>
-                <a href="">Alojamiento</a>
-                <a href="">Huerto y cocina ecológica</a>
-                <a href="">Animales</a>
-                <a href="">Parc natural </a>
-                <a href="">Contacto</a>
             </div>
             <div class="contact-footer">
                 <p>Figaró-Montmany 08590 Barcelona</p>

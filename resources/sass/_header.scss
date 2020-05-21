@@ -9,8 +9,16 @@ header {
         color: white;
         font-family: $font;
 
-        span {
-            font-size: 48px;
+        a {
+            color: black !important;
+            text-decoration: none !important;
+        }
+        h1 {
+            a {
+                font-weight: 400 !important;
+                font-size: 48px !important;
+                color: white !important;
+            }
         }
 
         .headerNav {
@@ -24,16 +32,24 @@ header {
                     text-transform: lowercase;
                     text-decoration: none !important;
                 }
+                a:hover {
+                    color: rgba(255, 255, 255, 0.7) !important;
+                }
             }
         }
 
         button {
-            color: black    ;
+            color: black;
             background-color: white;
             border-radius: 2px;
             border: none;
             width: 120px;
             height: 50px;
+        }
+
+        button:hover {
+            color: white !important;
+            background-color: #967361;
         }
     }
 
@@ -43,6 +59,5 @@ header {
         padding-top: 150px;
         padding-left: 80px;
         color: white;
-
     }
 }

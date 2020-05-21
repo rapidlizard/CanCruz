@@ -12595,6 +12595,10 @@ section {
   margin-top: 30px;
 }
 
+.cta:hover {
+  background-color: #44342c;
+}
+
 .quote-text {
   width: 700px;
   display: flex;
@@ -12750,8 +12754,15 @@ header .header {
   font-family: "DM Mono", monospace;
 }
 
-header .header span {
-  font-size: 48px;
+header .header a {
+  color: black !important;
+  text-decoration: none !important;
+}
+
+header .header h1 a {
+  font-weight: 400 !important;
+  font-size: 48px !important;
+  color: white !important;
 }
 
 header .header .headerNav {
@@ -12767,6 +12778,10 @@ header .header .headerNav nav a {
   text-decoration: none !important;
 }
 
+header .header .headerNav nav a:hover {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
 header .header button {
   color: black;
   background-color: white;
@@ -12774,6 +12789,11 @@ header .header button {
   border: none;
   width: 120px;
   height: 50px;
+}
+
+header .header button:hover {
+  color: white !important;
+  background-color: #967361;
 }
 
 header .headerContent {
@@ -12897,6 +12917,7 @@ header .headerContent {
 .site-footer {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 100vw;
   margin-top: 60px;
 }
@@ -12906,14 +12927,14 @@ header .headerContent {
 }
 
 .site-footer .logo-footer img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.site-footer .nav-footer a {
-  display: block;
-  color: black;
-  line-height: 35px;
+.site-footer .contact-footer {
+  text-align: center;
 }
 
 .site-footer .social-footer {
@@ -12922,7 +12943,7 @@ header .headerContent {
 }
 
 .site-footer .social-footer a {
-  color: black;
+  color: black !important;
 }
 
 .estancia-form {
@@ -12988,8 +13009,19 @@ header .headerContent {
   font-family: "DM Mono", monospace;
 }
 
-.header-basic .header span {
-  font-size: 48px;
+.header-basic .header a {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.header-basic .header a:hover {
+  color: #47372e !important;
+}
+
+.header-basic .header h1 a {
+  font-weight: 400 !important;
+  font-size: 48px !important;
+  color: #967361 !important;
 }
 
 .header-basic .header .headerNav {
@@ -13005,6 +13037,10 @@ header .headerContent {
   text-decoration: none !important;
 }
 
+.header-basic .header .headerNav nav a:hover {
+  color: #47372e !important;
+}
+
 .header-basic .header button {
   color: white;
   background-color: #967361;
@@ -13012,6 +13048,14 @@ header .headerContent {
   border: none;
   width: 120px;
   height: 50px;
+}
+
+.header-basic .header button:hover {
+  background-color: #3d2f27;
+}
+
+.header-basic .header button:hover a {
+  color: white !important;
 }
 
 .header-basic .headerContent {

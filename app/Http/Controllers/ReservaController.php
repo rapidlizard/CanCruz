@@ -30,7 +30,7 @@ class ReservaController extends Controller
     {
         if(Reserva::validate_dates($request->check_in, $request->check_out) === false) {
             $error = "Please make sure that your check in day is before your check out day";
-            return view('reserva.create', ['request' => $request, 'error' => $error]);
+            return view('reserva.create', ['request' => $request, 'error' => $error, 'key' => $request->key]);
         }
 
         $days = Calendar::calculate_total_days($request->check_in, $request->check_out);

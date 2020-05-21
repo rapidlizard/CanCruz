@@ -9,9 +9,42 @@ section {
   }
 }
 
+.card-estancia{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .huerto {
 
   .h2texto {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+  }
+}
+
+.subtitle-text-2col{
+  margin-left:160px;
+  margin-right:160px;
+  margin-bottom:60px;
+}
+
+.gallery-text{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .container{
+    width: 50% !important;
+    height: 500px !important;
+    padding: 0 !important;
+  }
+  .text-square-half{
+    width: 50%;
+  }
+}
+
+.parque{
+  .container{
+    padding: 30px 0;
   }
 }

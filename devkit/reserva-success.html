@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+        <title>{{ config('app.name', 'Laravel') }}</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito"
+            rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+            integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+            crossorigin="anonymous"
+        />
+
+        <!-- Styles -->
+        <link href="../public/css/app.css" rel="stylesheet" />
+    </head>
+    <body>
+
+<!--  incluir header-basic -->
+
+        <main>
+            <section>
+                <div class="h2texto">
+                    <h2>Reserva realizada</h2>
+                    <p>
+                        Ha realizado correctamente su reserva en Can Cruz
+                    </p>
+                </div>
+            </section>
+
+            <section class="reserva-contacto flex-row">  
+                       
+                <div class="datos-reserva flex-column">
+                    <div class="data">
+                        <h4>DATOS DE RESERVA</h4>
+                    </div>
+                    <div class="data">
+                        <small>Estancia</small> 
+                        <p>Nombre Estancia</p>
+                    </div> 
+                    <div class="data">
+                        <small>Número de personas</small> 
+                        <p>2</p>
+                    </div> 
+                    <div class="data">
+                        <small>Fecha de entrada</small> 
+                        <p>00/00/20202</p>
+                    </div> 
+                    <div class="data">
+                        <small>Fecha de salida</small> 
+                        <p>00/00/20202</p>
+                    </div> 
+                    <div class="data">
+                        <small>Extras</small> 
+                        <p>Desayuno(12€/persona)</p>
+                        <p>Llevo mascota (5€)</p>
+                    </div> 
+                    <div class="data">
+                        <small>Precio total</small> 
+                        <p>341€</p>
+                    </div> 
+
+                </div>
+
+                <div class="datos-reserva flex-column">
+                    <div class="data">
+                        <h4>DATOS DE CONTACTO</h4>
+                    </div>
+                    <div class="data">
+                        <small>Nombre</small> 
+                        <p>Pol</p>
+                    </div> 
+                    <div class="data">
+                        <small>E-mail</small> 
+                        <p>polelgatetefeliz@gmail.com</p>
+                    </div> 
+                    <div class="data">
+                        <small>Teléfono</small> 
+                        <p>555 555 555</p>
+                    </div> 
+
+                </div>
+
+                <div class="info">
+                    <div class="data">
+                        <h4>CÓDIGO DE RESERVA</h4>
+                        <h3 class="calculadora-precio"><strong>JG78th</strong></h3>
+                    </div> 
+                    <div class="data-icon">
+                        <div class="icon">
+                            <span><i class="far fa-clock"></i></span>
+                            <p><strong>Horario de entrada y salida</strong></p>
+                        </div>
+                        <p>
+                            La entrada las estancias y la salida de las estancias de
+                            Can Cruz es a partir de las 12 am pudiendo estar en 
+                            la Masía antes de su hora de entrada.
+                        </p>    
+                    </div>   
+                    <div class="data-icon">
+                        <div class="icon">
+                            <span><i class="fas fa-times"></i></span>
+                            <p><strong>Cancelaciones de reserva</strong></p>
+                        </div>
+                        <p>
+                            Le rogamos por favor que en caso de no poder asistir 
+                            a la estancia reservada, nos envíen un mail a 
+                            <a href="mailto:reservas@can-cruz.com">reservas@can-cruz.com</a> 
+                            para dejar disponible la estacia a otras personas.
+                        </p>    
+                    </div>   
+                    
+                </div>
+
+               
+            </section>
+            
+        </main>
+
+<!--  incluir footer -->
+
+    </body>
+</html>

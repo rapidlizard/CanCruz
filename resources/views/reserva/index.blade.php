@@ -27,7 +27,7 @@
 
             @foreach($reservas as $reserva)
             <tr>
-                
+
                 <td>{{$reserva->reservation_key}}</td>
                 <td>{{$reserva->name}}</td>
                 <td>{{$reserva->mail}}</td>
@@ -41,8 +41,6 @@
                         $calendar::calculate_total_days($reserva->check_in, $reserva->check_out)
                     }}
                 </td>
-                
-                <td>   
                     <form action="{{Route('reserva.destroy', $reserva->id)}}" method="post">
                     @method('delete')
                     @csrf

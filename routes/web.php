@@ -42,3 +42,6 @@ Route::get('/puigracios','PagesController@puigracios');
 Route::get('/santcristofol','PagesController@santcristofol');
 
 Route::get('/rocacentella','PagesController@rocacentella');
+
+Route::get('/reserva_usuario_first','PagesController@reserva_usuario_first');
+

@@ -24,9 +24,9 @@ class PagesController extends Controller
         return view('contacto');
     }
 
-    public function reserva()
+    public function reserva_usuario_first()
     {
-        return view('reserva');
+        return view('reserva_usuario_first');
     }
 
     public function puigracios()

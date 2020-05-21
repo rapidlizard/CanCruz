@@ -1,0 +1,212 @@
+.flex-3-items {
+    display: flex;
+    justify-content: space-evenly;
+    @include desktop-container;
+}
+
+.h2texto {
+    text-align: center;
+    max-width: 900px !important; 
+    padding: 20px;
+    @include desktop-container;
+}
+
+.h3texto-right {
+    padding: 20px 0;
+}
+
+.caption {
+    text-align: center;
+    padding-top: 35px;
+    a {
+        color: black !important;
+    }
+}
+
+.text-square-half {
+    text-align: center;
+    padding: 0 5%;
+    h3 {
+        padding-bottom: 40px;
+    }
+    p {
+        padding-bottom: 30px;
+    }
+    a {
+        color: black !important;
+    }
+}
+
+.estancia-img-price {
+    position: relative;
+    padding-top: 40px;
+    padding-left: 40px;
+    font-family: $font;
+    color: white;
+    strong {
+        font-size: 40px;
+    }
+    
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    padding-bottom: 15px;
+    label{
+        padding-left: 5px;
+        font-size: 14px !important;
+    }
+}
+
+.cta {
+    background-color: #967361;
+    color: white;
+    padding: 20px;
+    border:none;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.cta:hover {
+    background-color: #44342c;
+}
+
+.quote-text{
+    width: 700px;
+    display: flex;
+    align-items: center;
+    @include desktop-container;
+
+}
+
+.img-description {
+    width: 700px;
+    
+}
+
+.calculadora-precio {
+    margin-bottom: 40px;
+   /*  align-items: flex-end; QUEREMOS ALINEARLO ABAJO CON EL CTA */
+}
+
+.form-calculadora{
+    flex:row !important;
+    align-items: flex-end;
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px !important;
+    font-family: $font !important;
+    i{
+        padding: 10px;
+    }
+}
+
+.text-2col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:40px;
+    align-items:flex-start;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:40px;
+}
+
+.img-checkbox{
+    position: relative;
+    input{
+        width: 40px !important;
+        position: absolute;
+        margin-left: 260px;
+        margin-top: 20px;
+    }
+}
+
+.selection-estancia{
+    width: 50%;
+    
+}
+
+.stepper-reserva{
+    align-content: center;
+}
+
+.active{
+    color: #967361;
+    text-align: center;
+    
+}
+
+.disable{
+    color: #967361;
+    opacity: 0.3;
+    text-align: center;
+
+}
+
+.stepper-reserva{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly !important;
+}
+
+.calculadora-precio{
+    color: #967361;
+}
+
+.datos-reserva{
+    .data{
+        padding-bottom:10px;  
+        small{
+            opacity: 0.5;
+        }    
+    }
+    width: 30%;
+    margin:0;
+    padding: 40px;
+    background-color: #f2eeec;
+}
+
+.info{
+    margin-top:40px;
+    padding: 0 40px;
+    width:33%;
+    .icon{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 10px;
+        i{
+            padding: 0 10px 0 0 !important;
+        }
+    }
+    .data-icon{
+        padding-bottom:40px;
+        a{
+            color: #967361 !important;
+        }
+    }
+}
+
+.hidden-input {
+    display: none;
+}

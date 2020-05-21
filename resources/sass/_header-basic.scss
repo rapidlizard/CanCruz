@@ -1,0 +1,71 @@
+.header-basic {
+    display: block;
+
+    .header {
+        @include desktop-container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #967361;
+        font-family: $font;
+
+        a {
+            color: white !important;
+            text-decoration: none !important;
+        }
+
+        a:hover {
+            color: #47372e !important;
+        }
+        
+        h1 {
+            
+            a {
+                font-weight: 400 !important;
+                font-size: 48px !important;
+                color: #967361 !important;
+            }
+        }
+        
+        .headerNav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            nav {
+                a {
+                    color: #967361 !important;
+                    margin: 0 10px;
+                    text-transform: lowercase;
+                    text-decoration: none !important;
+                }
+
+                a:hover {
+                    color: #47372e !important;
+                }        
+            }
+        }
+
+        button {
+            color: white;
+            background-color: #967361;
+            border-radius: 2px;
+            border: none;
+            width: 120px;
+            height: 50px;
+        }
+
+        button:hover {
+            background-color: #3d2f27;
+            a {
+                color: white !important;
+            }
+        }
+    }
+
+    .headerContent {
+        @include desktop-container;
+        height: 400px;
+        padding-top: 150px;
+        color: white;
+    }
+}

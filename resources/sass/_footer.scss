@@ -1,0 +1,30 @@
+.site-footer {
+    display: flex;
+    justify-content: space-evenly;
+
+    align-items: center;
+    width: 100vw;
+    margin-top: 60px;
+
+    div {
+        width: 20%;
+    }
+
+    .logo-footer {
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+    .contact-footer {
+        text-align: center;
+    }
+    .social-footer {
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            color: black !important;
+        }
+    }
+}

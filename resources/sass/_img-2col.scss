@@ -1,0 +1,12 @@
+.img-2col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    img{
+      width: 650px;
+      height: 500px;
+      object-fit: cover;
+    }
+
+  }

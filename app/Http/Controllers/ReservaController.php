@@ -19,6 +19,15 @@ class ReservaController extends Controller
 
     public function create(Request $request)
     {
+        $reservas = Reserva::all();
+        $listOfDates = [];
+        foreach($reservas as $reserva){
+            $alldates = Calendar::get_all_dates($reserva->check_in, $reserva->check_out);
+            foreach($alldates as $date){
+                array_push($listOfDates, $date);
+            }
+        }
+        dd($listOfDates);
         return view('reserva.create');
     }
 

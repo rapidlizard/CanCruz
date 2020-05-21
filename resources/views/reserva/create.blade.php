@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div class="container">
     <div>
         <h1>Añadir una reserva</h1>
@@ -10,15 +11,17 @@
     @csrf
     <div class="row">
         <div class="col-12 col-md-4">
+ 
             <br>
             <label><b>Llegada</b></label>
-            <input type="date" name="check_in" id="check_in" class="form-control">
+            <input type="text" name="check_in" class="datepicker form-control">
+            
         </div>
         <div class="col-12 col-md-4">
         <br><label><b>Salida</b></label>
-           <input type="date" name="check_out" id="check_out" class="form-control">
+           <input type="text" name="check_out" id="datepicker" class="form-control">
         </div>
-        
+  
         <div class="col-12 col-md-4">
             <br><label><b>Personas</b></label>
           <select class="col-md-12 form-control" name="persons" id="">
@@ -87,4 +90,5 @@
 
 
 </div>
+
 @endsection

@@ -2,6 +2,12 @@
 
 @section('content')
 <div class="container">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{$error}}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
     <div>
         <h1>Añadir una reserva</h1>
     </div>
@@ -31,7 +37,7 @@
                     <option value="4">4</option>
                 </select>
             </div>
-        
+            
             <div class=" col-12 col-md-4">
                 <br>
                 <br>

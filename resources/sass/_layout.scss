@@ -18,7 +18,7 @@ section {
 .huerto {
 
   .h2texto {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 
@@ -28,5 +28,23 @@ section {
   margin-bottom:60px;
 }
 
+.gallery-text{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .container{
+    width: 50% !important;
+    height: 500px !important;
+    padding: 0 !important;
+  }
+  .text-square-half{
+    width: 50%;
+  }
+}
 
-
+.parque{
+  .container{
+    padding: 30px 0;
+  }
+}

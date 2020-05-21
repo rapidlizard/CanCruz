@@ -6,7 +6,8 @@
 
 .h2texto {
     text-align: center;
-    max-width: 900px !important;
+    max-width: 900px !important; 
+    padding: 20px;
     @include desktop-container;
 }
 .h3texto-right {
@@ -111,3 +112,92 @@
     padding-top: 30px;
 }
 
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:40px;
+    align-items:flex-start;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:40px;
+}
+
+.img-checkbox{
+    position: relative;
+    input{
+        width: 40px !important;
+        position: absolute;
+        margin-left: 260px;
+        margin-top: 20px;
+    }
+}
+
+.selection-estancia{
+    width: 50%;
+    
+}
+.stepper-reserva{
+    align-content: center;
+}
+
+.active{
+    color: #967361;
+    text-align: center;
+    
+}
+.disable{
+    color: #967361;
+    opacity: 0.3;
+    text-align: center;
+
+}
+
+.stepper-reserva{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly !important;
+}
+
+.calculadora-precio{
+    color: #967361;
+}
+
+.datos-reserva{
+    .data{
+        padding-bottom:10px;  
+        small{
+            opacity: 0.5;
+        }    
+    }
+    width: 30%;
+    margin:0;
+    padding: 40px;
+    background-color: #f2eeec;
+}
+
+
+.info{
+    margin-top:40px;
+    padding: 0 40px;
+    width:33%;
+    .icon{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 10px;
+        i{
+            padding: 0 10px 0 0 !important;
+        }
+    }
+    .data-icon{
+        padding-bottom:40px;
+        a{
+            color: #967361 !important;
+        }
+    }
+}   

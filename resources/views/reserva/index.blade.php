@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-
-
 @section('content')
+@inject('calendar','App\Calendar')
 <div class="container">
 
 
@@ -23,7 +22,7 @@
                 <th>Habitación</th>
                 <th>Entrada</th>
                 <th>Salida</th>
-
+                <th>Dias</th>
             </tr>
 
             @foreach($reservas as $reserva)
@@ -37,8 +36,11 @@
                 <td>{{$reserva->estancia->name}}</td>
                 <td>{{$reserva->check_in}}</td>
                 <td>{{$reserva->check_out}}</td>
-
                 <td>
+                    {{
+                        $calendar::calculate_total_days($reserva->check_in, $reserva->check_out)
+                    }}
+                </td>
                     <form action="{{Route('reserva.destroy', $reserva->id)}}" method="post">
                     @method('delete')
                     @csrf
@@ -56,7 +58,6 @@
             </tr>
             @endforeach
         </table>
-
     </div>
 </div>
 @endsection

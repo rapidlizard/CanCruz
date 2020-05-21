@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div>
         <h1>Añadir una reserva</h1>
@@ -11,16 +12,21 @@
         <div class="col-12 col-md-4">
             <br>
             <label><b>Llegada</b></label>
-            <input type="date" name="check_in" class="form-control">
+            <input type="date" name="check_in" id="check_in" class="form-control">
         </div>
         <div class="col-12 col-md-4">
         <br><label><b>Salida</b></label>
-           <input type="date" name="check_out" class="form-control">
+           <input type="date" name="check_out" id="check_out" class="form-control">
         </div>
         
         <div class="col-12 col-md-4">
             <br><label><b>Personas</b></label>
-            <input  class="form-control" type="number" name="persons" class="form-control">
+          <select class="col-md-12 form-control" name="persons" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
         </div>
        
         <div class=" col-12 col-md-4">
@@ -52,8 +58,8 @@
          </select>
         </div>
         <div class="col-12 col-md-4">
-           <br> <label><b>Nombre</b></label>
-            <input type="text" name="name" class="form-control">
+            <br> <label><b>Nombre</b></label>
+            <input type="text" name="name" class="form-control" >
         </div>
        
 
@@ -71,10 +77,14 @@
       <br>
       <div class="d-flex justify-content-between">
         <a href="/reserva" class="btn btn-link"><span style="padding-right:8px"><i class="fas fa-chevron-left"></i></span>Volver al listado</a>
-        <input type="submit" class="btn btn-primary btn-xs" value="Crear reserva">
+        <div>
+          <input type="submit" class="btn btn-primary btn-xs" value="Crear reserva">
+        
+        </div>
       </div>
     </form>
-   
+
+
 
 </div>
 @endsection

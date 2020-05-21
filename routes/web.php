@@ -27,8 +27,9 @@ Route::resource('estancia','EstanciaController');
 
 Route::resource('calculadora','CalculadoraController');
 
-Route::get('/masia','PagesController@masia');
 
+
+Route::get('/masia','PagesController@masia');
 
 Route::get('/huerto_cocina','PagesController@huerto_cocina');
 

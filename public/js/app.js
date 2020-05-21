@@ -39546,39 +39546,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery_ui_ui_widgets_datepicker_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery_ui_ui_widgets_datepicker_js__WEBPACK_IMPORTED_MODULE_1__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-reuire;
 
 window.$ = window.jQuery = jquery__WEBPACK_IMPORTED_MODULE_0___default.a;
 
-var disabledDates = ["2020-05-22", "2020-05-14", "2020-05-21"];
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('.datepicker').datepicker({
-  beforeShowDay: function beforeShowDay(date) {
-    var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
-    return [disabledDates.indexOf(string) == -1];
-  }
-}); // $(function() {
-//     $(".datepicker").datepicker({
-//         defaultDate: new Date("3-1-2012"),
-//         dateFormat: "dd MM yy",
-//         beforeShowDay: unavailable
-//     });
-// });
-// $(function () {
-//     $.datepicker.setDefaults($.datepicker.regional["es"]);
-//         $(".datepicker").datepicker({
-//             firstDay: 1
-//         });
-// });
-// $(function () {
-//     $("#off").click(function () {
-//         $(".datepicker").datepicker().hide();
-//     });
-// });
-// $(function () {
-//     $("#on").click(function () {
-//         $(".datepicker").datepicker().show();
-//     });
-// });
+fetch('/api/dates').then(function (response) {
+  return response.json();
+}).then(function (data) {
+  var disabledDates = data;
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.datepicker').datepicker({
+    beforeShowDay: function beforeShowDay(date) {
+      var string = jQuery.datepicker.formatDate('dd-mm-yy', date);
+      return [disabledDates.indexOf(string) == -1];
+    }
+  });
+});
 
 /***/ }),
 
@@ -39645,8 +39626,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Axel\Documents\AXEL\CODER\FACTORIAF5\GIT\CanCruz2\CanCruz\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Axel\Documents\AXEL\CODER\FACTORIAF5\GIT\CanCruz2\CanCruz\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/francisco/Desktop/CanCruz/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/francisco/Desktop/CanCruz/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

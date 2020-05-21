@@ -8,6 +8,7 @@ use App\Reserva;
 use App\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\ReservaController;
 
 class PagesController extends Controller
 {
@@ -74,13 +75,18 @@ class PagesController extends Controller
             $price += $pet->price;
         }
 
-        $reservaKey = Reserva::generateKey($keylenght = 6);
+        $key = Reserva::generateKey($keylenght = 6);
 
-        return view('reserva_usuario_second', ['request'=>$request, 'price' => $price]);
+        return view('reserva_usuario_second', ['request'=>$request, 'price' => $price, 'key' => $key]);
     }
 
-    public function success()
+    public function success(Request $request)
     {
-        return view('reserva_usuario_third');
+        // dd($request);
+        $reserva = new ReservaController();
+        $reserva->store($request);
+        return view('reserva_usuario_third', ['request'=> $request]);
     }
+
+    
 }

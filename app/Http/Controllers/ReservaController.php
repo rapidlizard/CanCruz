@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
+
 class ReservaController extends Controller
 {
     public function index()
@@ -20,9 +21,9 @@ class ReservaController extends Controller
 
     public function create(Request $request)
     {
-
+        $key = Reserva::generateKey($keylenght = 6);
         $error = null;
-        return view('reserva.create', ['request' => $request, 'error' => $error]);
+        return view('reserva.create', ['request' => $request, 'error' => $error, 'key' => $key]);
     }
 
     public function store(Request $request)
@@ -46,14 +47,11 @@ class ReservaController extends Controller
         if($request->pet == 1){
             $price += $pet->price;
         }
-
-        $reservaKey = Reserva::generateKey($keylenght = 6);
-
         $check_in = \Carbon\Carbon::parse($request->check_in)->format('Y-m-d');
         $check_out = \Carbon\Carbon::parse($request->check_out)->format('Y-m-d');
 
         Reserva::create([
-            'reservation_key' => $reservaKey,
+            'reservation_key' => $request->key,
             'name' => $request->name,
             'mail' => $request->mail,
             'phone' => $request->phone,

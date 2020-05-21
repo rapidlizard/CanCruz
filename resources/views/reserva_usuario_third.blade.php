@@ -24,24 +24,33 @@
                 </div> 
                 <div class="data">
                     <small>Número de personas</small> 
-                    <p>2</p>
+                    <p>{{$request->persons}}</p>
                 </div> 
                 <div class="data">
                     <small>Fecha de entrada</small> 
-                    <p>00/00/20202</p>
+                    <p>{{$request->check_in}}</p>
                 </div> 
                 <div class="data">
                     <small>Fecha de salida</small> 
-                    <p>00/00/20202</p>
+                    <p>{{$request->check_out}}</p>
                 </div> 
                 <div class="data">
                     <small>Extras</small> 
-                    <p>Desayuno(12€/persona)</p>
-                    <p>Llevo mascota (5€)</p>
+                    @if($request->pet == 1)
+                       
+                        <p>Llevo mascota (5&euro;)</p>
+                    @endif
+                    @if($request->breakfast == 1)
+                      
+                        <p>Desayuno (12€/persona)</p>
+                    @endif
+                    @if($request->breakfast == 0)
+                        <p>Sin Desayuno</p>
+                    @endif
                 </div> 
                 <div class="data">
                     <small>Precio total</small> 
-                    <p>341€</p>
+                    <p>{{$request->total_price}}€</p>
                 </div> 
 
             </div>
@@ -52,15 +61,15 @@
                 </div>
                 <div class="data">
                     <small>Nombre</small> 
-                    <p>Pol</p>
+                    <p>{{$request->name}}</p>
                 </div> 
                 <div class="data">
                     <small>E-mail</small> 
-                    <p>polelgatetefeliz@gmail.com</p>
+                    <p>{{$request->mail}}</p>
                 </div> 
                 <div class="data">
                     <small>Teléfono</small> 
-                    <p>555 555 555</p>
+                    <p>{{$request->phone}}</p>
                 </div> 
 
             </div>
@@ -68,7 +77,7 @@
             <div class="info">
                 <div class="data">
                     <h4>CÓDIGO DE RESERVA</h4>
-                    <h3 class="calculadora-precio"><strong>JG78th</strong></h3>
+                    <h3 class="calculadora-precio"><strong>{{$request->reservation_key}}</strong></h3>
                 </div> 
                 <div class="data-icon">
                     <div class="icon">

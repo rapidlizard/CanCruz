@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         factory(Service::class)->create(['id' => 2, 'name' => 'pet', 'price' => '5']);
         factory(Service::class)->create(['id' => 3, 'name' => 'room', 'price' => '48']);
 
-        $this->call(ServiceSeeder::class);
+        // $this->call(ServiceSeeder::class);
         $this->call(EstanciaSeeder::class);
         $this->call(ReservaSeeder::class);
     }

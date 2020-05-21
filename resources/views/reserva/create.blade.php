@@ -14,6 +14,7 @@
 
     <form action="{{Route('reserva.store')}}" method="post">
         @csrf
+        <input type="text" name="key" class="hidden-input" value="{{$key}}">
         <div class="row">
             <div class="col-12 col-md-4">
                 <br>

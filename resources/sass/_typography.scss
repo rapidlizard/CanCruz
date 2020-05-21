@@ -14,6 +14,11 @@ h3 {
     font-family: $font !important;
 }
 
+h4 {
+    font-size: 20px !important;
+    font-family: $font !important;
+}
+
 p {
     font-size: 16px !important;
     font-family: $font !important;
@@ -25,4 +30,15 @@ a {
     font-weight: bold !important;
     font-family: $font !important;
     text-decoration: underline !important;
+}
+
+label{
+    font-size: 16px !important;
+    font-family: $font !important;
+}
+
+small {
+    font-size: 14px !important;
+    font-family: $font !important;
+    line-height: 20px !important;
 }

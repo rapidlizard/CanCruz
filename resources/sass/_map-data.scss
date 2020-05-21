@@ -1,0 +1,20 @@
+.map-data { 
+  display: flex;
+  flex-direction:row;
+  
+  margin-left: 40px;
+  margin-right: 40px;
+
+  .data{
+    padding: 60px;
+    width: 650px;
+    height: 500px
+  }
+
+  .map{
+    padding: 60px;
+    width: 650px;
+    height: 500px;
+    background-color: #929292;
+  }
+}

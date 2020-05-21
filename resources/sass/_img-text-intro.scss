@@ -1,0 +1,19 @@
+.img-text-intro { 
+  display: flex;
+  flex-direction:row;
+  
+  margin-left: 40px;
+  margin-right: 40px;
+
+  img {
+    width: 650px;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  div{
+    padding: 60px;
+    width: 650px;
+    height: 500px
+  }
+}

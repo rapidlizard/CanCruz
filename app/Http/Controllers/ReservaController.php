@@ -20,6 +20,7 @@ class ReservaController extends Controller
 
     public function create(Request $request)
     {
+
         $error = null;
         return view('reserva.create', ['request' => $request, 'error' => $error]);
     }
@@ -103,5 +104,18 @@ class ReservaController extends Controller
     {
         $reserva->delete();
         return redirect(route('reserva.index'));
+    }
+
+    public function get_dates()
+    {
+        $reservas = Reserva::all();
+        $listOfDates = [];
+        foreach($reservas as $reserva){
+            $alldates = Calendar::get_all_dates($reserva->check_in, $reserva->check_out);
+            foreach($alldates as $date){
+                array_push($listOfDates, $date);
+            }
+        }
+        return $listOfDates;
     }
 }

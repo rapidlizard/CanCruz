@@ -1,26 +1,40 @@
 // Reset
-@import 'reset';
+@import "reset";
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Mixins
-@import 'mixin';
+@import "mixin";
 
 // Typography
-@import 'typography';
+@import "typography";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
+
+//Jquery
+@import '~jquery-ui/themes/base/all.css';
 
 // Layout
-@import 'layout';
+@import "layout";
 
 // Components
-@import 'components';
-@import 'nav';
-@import 'img-caption';
-@import 'img-text-right';
-@import 'text-img-bg';
-@import 'img-text-left';
-@import 'images';
+@import "components";
+@import "header";
+@import "img-caption";
+@import "img-text-right";
+@import "text-img-bg";
+@import "img-text-left";
+@import "images";
+@import "h2-texto-wideimg";
+@import "footer";
+@import "estancia-form";
+/// new to add
+@import "cards";
+@import "header-basic";
+@import "img-text-intro";
+@import "quote-text";
+@import "img-2col";
+@import "map-data.scss";
+@import "carousel-inner";

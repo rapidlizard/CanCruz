@@ -21,7 +21,7 @@ class Calendar extends Model
         return $totalDays;
     }
 
-    public function get_all_dates($check_in, $check_out)
+    public static function get_all_dates($check_in, $check_out)
     {
         $checkin = new DateTime($check_in);
         $checkout = new DateTime($check_out);

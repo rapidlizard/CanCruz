@@ -1,0 +1,33 @@
+.site-footer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+    margin-top: 60px;
+
+    div {
+        width: 20%;
+    }
+
+    .logo-footer {
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .nav-footer {
+        a {
+            display: block;
+            color: black;
+            line-height: 35px;
+        }
+    }
+    .contact-footer {
+    }
+    .social-footer {
+        display: flex;
+        justify-content: space-evenly;
+        a {
+            color: black;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.h2-texto-wideimg {
+    a {
+        margin-top: 20px;
+        text-align: center;
+        display: block;
+        color: black !important;
+    }
+    img {
+        object-fit: cover;
+        height: 400px;
+        width: 100vw;
+    }
+}

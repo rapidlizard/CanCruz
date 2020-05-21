@@ -20,7 +20,7 @@
                 </div>
                 <div class="data">
                     <small>Estancia</small> 
-                    <p>Nombre Estancia</p>
+                    <p>{{$request->estancia_id}}</p>
                 </div> 
                 <div class="data">
                     <small>Número de personas</small> 

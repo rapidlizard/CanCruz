@@ -22,8 +22,8 @@
                             alt="room picture"
                         />
                         <div class="caption">
-                            <h3>Estancia name</h3>
-                            <a href="">ver mas</a>
+                            <h3>Puigracios</h3>
+                            <a href="{{url('/puigracios')}}">ver más</a>
                         </div>
                     </div>
                     <div class="img-caption">
@@ -33,7 +33,7 @@
                         />
                         <div class="caption">
                             <h3>Estancia name</h3>
-                            <a href="">ver mas</a>
+                            <a href="{{url('/puigracios')}}">ver mas</a>
                         </div>
                     </div>
                     <div class="img-caption">
@@ -43,7 +43,7 @@
                         />
                         <div class="caption">
                             <h3>Estancia name</h3>
-                            <a href="">ver más</a>
+                            <a href="{{url('/puigracios')}}">ver más</a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                             huerto y del gallinero así como la miel de nuestros
                             campos.
                         </p>
-                        <a href="">ver más</a>
+                        <a href="{{url('/huerto_cocina/')}}">ver más</a>
                     </div>
                 </div>
 
@@ -98,7 +98,7 @@
                             sabores originales que nos dan los productos de
                             excepcional calidad.
                         </p>
-                        <a href="">ver más</a>
+                        <a href="{{url('/huerto_cocina/')}}">ver más</a>
                     </div>
                 </div>
             </section>
@@ -114,7 +114,7 @@
                             urna tristique ligula, a pretium augue neque eu
                             augue.
                         </p>
-                        <a href="">ver más</a>
+                        <a href="{{url('/masia/')}}">ver más</a>
                     </div>
                 </div>
             </section>
@@ -164,7 +164,7 @@
                         </div>
                     </div>
                     
-                    <a href="">ver más</a>
+                    <a href="{{url('/parque_montseny/')}}">ver más</a>
             </section>
                     
         </main>

@@ -47,7 +47,7 @@
                         />
                         <div class="caption">
                             <h3>Estancia name</h3>
-                            <a href="">ver mas</a>
+                            <a href="">ver más</a>
                         </div>
                     </div>
                     <div class="img-caption">

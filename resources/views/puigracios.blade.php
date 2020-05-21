@@ -35,7 +35,8 @@
                 </div>
 
                 <div class="estancia-form">
-                    <form action="">
+                    <form action="/reserva_usuario_second">
+                    <input type="text" name="estancia_id" value=1 class="hidden-input">
                         <div class="form">
                             <div class="block">
                             <label>Numero de Personas</label>
@@ -47,21 +48,21 @@
                             </select>
                             </div>
                             <div class="block">
-                                <label>Check in</label>
-                                <input type="date" name="check_in" id="" />
+                                <label>Día de entrada</label>
+                                <input type="text" name="check_in" class="datepicker form-control" autocomplete="off">
                             </div>
                             <div class="block">
-                                <label>Check out</label>
-                                <input type="date" name="check_out" id="" />
+                                <label>Día de salida</label>
+                                <input type="text" name="check_out" class="datepicker form-control" autocomplete="off">
                             </div>
                             <div class="">
-                                <input type="checkbox" name="pet" id="" />
+                                <input type="checkbox" name="pet" value=1 />
                                 <label class="radio-label">
                                     <small> Llevo Mascota (+5&euro;)</small>
                                 </label>
                             </div>
                             <div class="">
-                                <input type="checkbox" name="breakfast" id="" />
+                                <input type="checkbox" name="breakfast" value=1 />
                                 <label class="radio-label">
                                     <small>Con desayuno (+12&euro;/persona)</small>
                                 </label>
@@ -76,7 +77,6 @@
                 <div class="calculadora-precio">
                         <h3>
                             <strong>
-                                341 €
                             </strong>
                         </h3>
                 </div>

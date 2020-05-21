@@ -51,11 +51,11 @@
                 <div class="data">
                     <small>Extras</small>
                     @if($request->pet == 1)
-                        <input class="hidden-input" type="number" value={{$request->pet}} name="pet">
+                        <input class="hidden-input" type="number" value="{{$request->pet}}" name="pet">
                         <p>Llevo mascota (5&euro;)</p>
                     @endif
                     @if($request->breakfast == 1)
-                        <input class="hidden-input" type="number" value={{$request->breakfast}} name="breakfast">
+                        <input class="hidden-input" type="number" value="{{$request->breakfast}}" name="breakfast">
                         <p>Desayuno (12€/persona)</p>
                     @endif
                     @if($request->breakfast == 0)

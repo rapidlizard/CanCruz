@@ -49,13 +49,16 @@ class ReservaController extends Controller
 
         $reservaKey = Reserva::generateKey($keylenght = 6);
 
+        $check_in = \Carbon\Carbon::parse($request->check_in)->format('Y-m-d');
+        $check_out = \Carbon\Carbon::parse($request->check_out)->format('Y-m-d');
+
         Reserva::create([
             'reservation_key' => $reservaKey,
             'name' => $request->name,
             'mail' => $request->mail,
             'phone' => $request->phone,
-            'check_in' => $request->check_in,
-            'check_out' => $request->check_out,
+            'check_in' => $check_in,
+            'check_out' => $check_out,
             'persons' => $request->persons,
             'pet' => $request->pet,
             'breakfast' => $request->breakfast,

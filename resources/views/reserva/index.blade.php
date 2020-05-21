@@ -41,6 +41,7 @@
                         $calendar::calculate_total_days($reserva->check_in, $reserva->check_out)
                     }}
                 </td>
+                <td>
                     <form action="{{Route('reserva.destroy', $reserva->id)}}" method="post">
                     @method('delete')
                     @csrf

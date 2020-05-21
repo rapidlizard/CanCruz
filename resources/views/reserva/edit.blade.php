@@ -13,13 +13,13 @@
       <div class="col-12 col-md-4">
         <br>
         <label><b>Check-in</b></label>
-          <input type="date" name="check_in" class="form-control" value="{{$reserva->check_in}}">
+        <input type="text" name="check_in" class="datepicker form-control" value="{{$reserva->check_in}}">
       </div>
       
       <div class="col-12 col-md-4">
         <br>
         <label><b>Check-out</b></label>
-        <input type="date" name="check_out" class="form-control" value="{{$reserva->check_out}}">
+        <input type="text" name="check_out" class="datepicker form-control" value="{{$reserva->check_out}}">
       </div>
         <br>
         

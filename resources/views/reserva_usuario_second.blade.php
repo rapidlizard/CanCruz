@@ -30,8 +30,16 @@
                 </div>
                 <div class="data">
                     <small>Estancia</small>
-                    <p>{{$request->estancia_id}}</p>
-                    <input class="hidden-input" type="number" value="{{$request->estancia_id}}" name="estancia_id">
+                    <p>{{$request->name}}</p>
+                     @if($request->name == 'Puigraciós')
+                     <input class="hidden-input" type="number" value="1" name="estancia_id">
+                     @endif
+                     @if($request->name == 'Sant Cristofol')
+                     <input class="hidden-input" type="number" value="2" name="estancia_id">
+                     @endif  
+                     @if($request->name== 'Rocacentella')
+                     <input class="hidden-input" type="number" value="3" name="estancia_id">
+                     @endif
                 </div> 
                 <div class="data">
                     <small>Número de personas</small>
@@ -88,7 +96,7 @@
                             <input type="text" name="phone">
                         </div>
                         <div class="">
-                            <input type="checkbox" name="pet" id="" />
+                            <input type="checkbox" id="" >
                             <label class="radio-label">
                                 <small>Do you accept Terms of Service</small>
                             </label>

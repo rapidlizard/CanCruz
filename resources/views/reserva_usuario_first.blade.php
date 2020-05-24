@@ -35,7 +35,7 @@
                     
                     <div class="card-small-estancia">
                         <div class="img-checkbox">
-                            <input type="radio" name="estancia_id" value="1">
+                        <input type="radio" name="name" value="Puigraciós">
                             <img src="https://images.unsplash.com/photo-1574790413799-c2a5a4ba4d02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60">
                         </div>
                         <div>
@@ -54,7 +54,7 @@
                     
                     <div class="card-small-estancia">
                         <div class="img-checkbox">
-                            <input type="radio" name="estancia_id" value="2">
+                        <input type="radio" name="name" value="Sant Cristofol">
                             <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
                         </div>
                         <div>
@@ -73,7 +73,7 @@
 
                     <div class="card-small-estancia">
                         <div class="img-checkbox">
-                            <input type="radio" name="estancia_id" value="3">
+                        <input type="radio" name="name" value="Rocacentella">
                             <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80">
                         </div>
                         <div>
@@ -113,13 +113,13 @@
                                 <input type="text" name="check_out" class="datepicker form-control" autocomplete="off">
                             </div>
                             <div class="">
-                                <input type="checkbox" name="pet" value=1 />
+                                <input type="checkbox" name="pet" value="1">
                                 <label class="radio-label">
                                     <small> Llevo Mascota (+5&euro;)</small>
                                 </label>
                             </div>
                             <div class="">
-                                <input type="checkbox" name="breakfast" value=1 />
+                                <input type="checkbox" name="breakfast" value="1">
                                 <label class="radio-label">
                                     <small>Con desayuno (+12&euro;/persona)</small>
                                 </label>

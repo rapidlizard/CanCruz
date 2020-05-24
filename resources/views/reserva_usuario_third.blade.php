@@ -20,7 +20,15 @@
                 </div>
                 <div class="data">
                     <small>Estancia</small> 
-                    <p>{{$request->estancia_id}}</p>
+                    @if($request->estancia_id == 1)
+                    <p>Puigraciós</p>
+                     @endif
+                     @if($request->estancia_id == 2)
+                    <p>Sant Cristofol</p>
+                     @endif
+                     @if($request->estancia_id == 3)
+                    <p>Rocacentella</p>
+                     @endif
                 </div> 
                 <div class="data">
                     <small>Número de personas</small> 

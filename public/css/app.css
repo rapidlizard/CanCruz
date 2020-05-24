@@ -12739,6 +12739,10 @@ section {
   display: none;
 }
 
+.error {
+  text-align: center;
+}
+
 header {
   display: block;
 }

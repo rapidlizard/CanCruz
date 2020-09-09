@@ -17,10 +17,16 @@ This was our first big project with Laravel! We had three weeks to create a full
 
 It had no payment system. The idea was that the client would pay once he got to the Hostal.
 
-### There are two ways of making a reservation:
+#### There are two ways of starting a reservation:
 
 -   Visiting the room page and reserving straight from there:
     ![Room page](./screenshots/room-page.png)
 
 -   Clicking the reservation button and choosing a room from there:
     ![Room page](./screenshots/reservation-page.png)
+
+One you had chosen the room and how many people would be staying you would be redirected to the second stage:
+![Room page](./screenshots/second-stage.png)
+
+And once you had done that you would be shown the final page with all the information about your reservation you just made:
+![Room page](./screenshots/final-stage.png)

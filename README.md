@@ -44,3 +44,9 @@ Once you had chosen the room and how many people would be staying you would be r
 
 And once you had done that you would be shown the final page with all the information about the reservation you just made:
 ![Room page](./screenshots/final-stage.png)
+
+## Admin Dashboard
+
+This is where the owners of the hostal would be able to manage their reservations. They would be able to delete edit and view each reservation:
+
+![Room page](./screenshots/admin-dashboard.png)

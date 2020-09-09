@@ -33,7 +33,6 @@
                 <td>{{$reserva->mail}}</td>
                 <td>{{$reserva->phone}}</td>
                 <td>{{$reserva->total_price}}</td>
-                <td>{{$reserva->estancia->name}}</td>
                 <td>{{$reserva->check_in}}</td>
                 <td>{{$reserva->check_out}}</td>
                 <td>
